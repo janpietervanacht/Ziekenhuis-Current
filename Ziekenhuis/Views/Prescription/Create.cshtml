@@ -1,0 +1,45 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+<!-- Alle teksten die via Apestaart Model worden getoond -->
+<!-- worden niet meer getoond bij een redisplay van een scherm in de POST routine. -->
+<!-- Onderstaande regel werkt dus niet -->
+<!-- Zie de shared view voor de oplossing -->
+@*<h4>     Creëer een recept voor @Model.ClientFullName </h4>*@
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+
+        <!-- Alleen specifieke, gecodeerde errormessages, komen in de ValidationSummary -->
+        <!-- De foutmeldingen, afgedwongen door DataAnnotations, komen bij de velden zelf te staan -->
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- Zet alle velden, die niet op scherm muteerbaar zijn in HiddenFor : NIET VERGETEN !! -->
+        <!-- Anders krijgt de controller deze velden niet meer terug in de POST actie-->
+
+        @Html.HiddenFor(p => p.Prescription.ClientId)
+        @Html.HiddenFor(p => p.Prescription.DoctorId)
+
+        <partial name="SharedViewsPrescr/_PrescriptionFieldsPartial.cshtml" for="@Model" />
+
+        <br />
+        <div>
+            <input type="submit" value="Creëer recept" />
+        </div>
+
+        <br />
+
+        <!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+        <partial name="SharedViewsPrescr/_ButtonToPrescrListPartial" for="@Model" />
+
+
+    </div>
+
+}
+
+
+
+

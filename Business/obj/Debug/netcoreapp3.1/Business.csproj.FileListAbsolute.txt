@@ -1,0 +1,112 @@
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-01 v1\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current version\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis - 2020-08-06 v3\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\Hospital\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb

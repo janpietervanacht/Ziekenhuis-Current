@@ -1,0 +1,41 @@
+﻿
+
+@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultViewModel
+
+<h4 class="purpleJP">Creëer Consult</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.HiddenFor(c => c.Consult.ActionCode)
+    @Html.HiddenFor(c => c.Consult.ClientId)
+    @Html.HiddenFor(c => c.Consult.DoctorId)
+
+    <!-- Aktiecode wordt niet getoond bij Create / Update van een client -->
+    @*  @Html.Partial("", Model)   VEROUDERDE SYNTAX *@
+    <partial name="SharedViewsCons/_ConsultFieldsPartial" for="@Model" />
+
+    <br />
+    <div>
+        <input type="submit" value="Creëer een consult" />
+    </div>
+
+    <br />
+    <!-- Als de shared view niet direct onder een standaard View folder staat -->
+    <!-- Bijvoorbeeld "Client" "Prescription" "Consult" of "Shared" -->
+    <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
+    <partial name="SharedViewsCons/_ButtonToConsListPartial.cshtml" for="@Model" />
+
+    <!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
+    <!-- "Client", "Prescription", etc, en "Shared" -->
+    <partial name="_ComplimentPartial" />
+
+</div>
+
+}
+

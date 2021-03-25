@@ -1,0 +1,44 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceViewModel
+
+<h4>
+    Creëer een factuur voor @Model.ClientFullName
+    <br />
+    Verantwoordelijke arts: <span style="font-style: italic">@Model.DoctorFullName</span>
+</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <!-- Zet alle velden, die niet op scherm muteerbaar zijn in HiddenFor : NIET VERGETEN !! -->
+    <!-- Anders krijgt de controller deze velden niet meer terug -->
+
+    @Html.HiddenFor(i => i.Invoice.ClientId)
+    @Html.HiddenFor(i => i.Invoice.DoctorId)
+    @Html.HiddenFor(i => i.Invoice.ActionCode)
+    <!-- Invoice nr wordt pas bij CREATE POST bepaald, hier is ie hidden -->
+    @Html.HiddenFor(i => i.Invoice.InvoiceNumber)
+
+    <partial name="SharedViewsInvoice/_InvoiceFieldsPartial.cshtml" for="@Model" />
+
+    <br />
+    <div>
+        <input type="submit" value="Creëer factuur" />
+    </div>
+
+    <br />
+
+    <!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsInvoice/_ButtonToInvoiceListPartial" for="@Model" />
+
+
+</div>
+
+}
+
+
+
+

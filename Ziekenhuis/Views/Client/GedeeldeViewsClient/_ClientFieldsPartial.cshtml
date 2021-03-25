@@ -1,0 +1,178 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel
+<!-- Neem DoctorFullName op in een TextBoxFor, want anders wordt de doctor naam niet meer -->
+<!-- getoond bij een redisplay van de view bij foutmeldingen -->
+<div class="form-group">
+    @Html.LabelFor(c => c.DoctorFullName, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(c => c.DoctorFullName, new { @readonly = "readonly", @class = "form-control" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.NrofPrescriptions, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.NrofPrescriptions, new
+                {
+                    htmlAttributes =
+                        new { @readonly = "readonly", @class = "form-control" }
+                })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.FirstName)
+    <div class="col-md-10">
+         @Html.TextBoxFor(c => c.Client.FirstName, new { placeholder = "Vul voornaam in", @class = "form-control" })
+    @Html.ValidationMessageFor(c => c.Client.FirstName, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<div class="form-group">
+    @Html.Label("Man")
+    @Html.RadioButtonFor(c => c.Client.Gender, "Man")
+    <br />
+    @Html.Label("Vrouw")
+    @Html.RadioButtonFor(c => c.Client.Gender, "Vrouw")
+    <br />
+    @Html.Label("Onzijdig")
+    @Html.RadioButtonFor(c => c.Client.Gender, "Onzijdig")
+    <br />
+</div>
+
+<div class="form-group">
+    @Html.Label("Is verzekerd: ")
+    @Html.CheckBoxFor(c => c.Client.IsInsured)
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.LastName, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(c => c.Client.LastName,
+                new { placeholder = "Vul achternaam in", @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.LastName, "", new { @class = "text-danger" })
+    </div>
+
+   
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.Street, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(c => c.Client.Street, new { placeholder = "Vul straat in", @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.Street, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.HouseNumber, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <!-- Als je EditorFor gebruikt bij een integer veld, verschijnt een arrow-enumerator rechts op -->
+    <!-- het veld, dat wil ik niet. Gebruik daarom TextBoxFor -->
+    <div class="col-md-10">
+        @Html.TextBoxFor(c => c.Client.HouseNumber, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.HouseNumber, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.PostalCode, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.Client.PostalCode, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.PostalCode, "", new { @class = "text-danger" })
+    </div>
+   
+
+</div>
+<div class="form-group">
+    <!-- TextBoxFor plaatst het veld rechts van het label -->
+    @Html.LabelFor(c => c.Client.City, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(c => c.Client.City, new { placeholder = "Vul plaats in", @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.City, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<!-- In de ClientViewModel wordt naast de client ook een lijst van alle landen meegegeven-->
+<!-- zodat je een dropdownlist van landen kan laten zien -->
+<div class="form-group">
+    @Html.Label("Land:")
+    <div class="col-md-10">
+        @Html.DropDownListFor(c => c.Client.CountryId,
+                new SelectList(Model.Countries, "Id", "CountryDescription"),
+                new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.CountryId, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+
+@*<div class="form-group">
+        @Html.LabelFor(c => c.Client.Country)
+        @Html.TextBoxFor(c => c.Client.Country, new { placeholder = "Vul land in", @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.Country, "", new { @class = "text-danger" })
+    </div>*@
+
+
+
+
+
+
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.BirthDate, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.Client.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.BirthDate, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.BudgetAvaiable, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.Client.BudgetAvaiable, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.BudgetAvaiable, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.BudgetSpent, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.Client.BudgetSpent, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.BudgetSpent, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<br />
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.CommentForDoctor, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.TextAreaFor(c => c.Client.CommentForDoctor, new { @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.CommentForDoctor, "", new { @class = "text-danger" })
+    </div>
+   
+</div>
+
+<br />
+<div class="form-group">
+    @Html.LabelFor(c => c.Client.PolicyNumber, htmlAttributes:
+                     new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.EditorFor(c => c.Client.PolicyNumber, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(c => c.Client.PolicyNumber, "", new { @class = "text-danger" })
+    </div>
+   
+</div>

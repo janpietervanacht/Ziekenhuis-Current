@@ -1,0 +1,33 @@
+﻿using Background.Interfaces;
+using Background.Managers;
+using BackGround.ConstantsAndEnums;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+//using System.Configuration;
+using System.IO;
+using Ziekenhuis.DataAccess.ApplicDbContext;
+using Ziekenhuis.DataAccess.Interfaces;
+using Ziekenhuis.DataAccess.Repositories;
+
+namespace BackGround
+{
+
+    class Program
+    {
+
+        private static void Main(string[] args)
+        {
+            // Opstarten Dependency Injection en processen
+            // is verplaatst naar een non-static method: StartBackGround(). 
+            var backgroundManager = new BackGroundManager();
+            backgroundManager.StartBackGround(); 
+        }
+
+    }
+
+    
+
+}
+

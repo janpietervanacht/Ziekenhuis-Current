@@ -1,0 +1,46 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h3 class="title-page-JP">Wijzig een factuur</h3>
+
+        <!-- Alleen specifieke, gecodeerde errormessages, komen in de ValidationSummary -->
+        <!-- De foutmeldingen, afgedwongen door DataAnnotations, komen bij de velden zelf te staan -->
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- Zet alle velden, die niet op scherm muteerbaar zijn in HiddenFor : NIET VERGETEN !! -->
+        <!-- Anders krijgt de controller deze velden niet meer terug -->
+
+        @Html.HiddenFor(p => p.Invoice.Id)
+        @Html.HiddenFor(p => p.Invoice.ActionCode)
+        @Html.HiddenFor(p => p.Invoice.ClientId)
+        @Html.HiddenFor(p => p.Invoice.DoctorId)
+
+        <div class="form-group">
+            <!-- Toon invoice nummer read only (gebruik niet: <fieldset disabled> dat werkt niet -->
+            @Html.LabelFor(i => i.Invoice.InvoiceNumber, htmlAttributes: new { @class = "label-for-JP" })
+            @Html.EditorFor(i => i.Invoice.InvoiceNumber, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+        </div>
+
+        <partial name="SharedViewsInvoice/_InvoiceFieldsPartial.cshtml" for="@Model" />
+
+        <div>
+            <input type="submit" value="Wijzig factuur" />
+        </div>
+
+        <br />
+        <br />
+
+        <partial name="SharedViewsInvoice/_ButtonToInvoiceListPartial" for="@Model" />
+
+    </div>
+
+}
+
+
+
+

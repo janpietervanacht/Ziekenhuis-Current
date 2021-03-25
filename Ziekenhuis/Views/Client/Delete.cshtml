@@ -1,0 +1,41 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel
+@using Ziekenhuis.Model
+
+<h4>Verwijder (totaal!) Client @Model.ClientFullName </h4>
+
+@if (Model.Client.ActionCode == 'A')
+{
+    <h4>Actief</h4>
+}
+else
+{
+    <h4>Inactief</h4>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(c => c.Client.Id)
+
+<fieldset disabled>
+    <legend>Verwijderen van @Model.ClientFullName: </legend>
+    @*@Html.Partial("_ClientDetailsPartial", Model )*@
+
+    <!-- Als de shared view niet direct onder een standaard View folder staat -->
+    <!-- Bijvoorbeeld "Client" "Prescription" of "Shared" -->
+    <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
+    <!-- Opmerking: vergeet de subfolder "GedeeldeViewsClient" niet -->
+    <partial name="GedeeldeViewsClient/_ClientFieldsPartial.cshtml" for="@Model" />
+</fieldset>
+
+    <div>
+        <input type="submit" value="Verwijder" class="redJP" />
+    </div>
+
+    <partial name="GedeeldeViewsClient/_ButtonToClientListPartial" for="@Model" />
+    <!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
+    <!-- "Client", "Prescription", etc, en "Shared" -->
+    <partial name="_ComplimentPartial" />
+}

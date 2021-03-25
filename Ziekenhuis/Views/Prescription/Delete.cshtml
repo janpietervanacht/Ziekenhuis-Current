@@ -1,0 +1,35 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    // Bewaar Prescr Id, want hiermee ruim je de Prescription en zijn lijnen op.
+    @Html.HiddenFor(p => p.Prescription.Id)
+
+    <fieldset disabled>
+        <legend>Delete</legend>
+        <!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+        <partial name="SharedViewsPrescr/_PrescriptionFieldsPartial" for="@Model" />
+    </fieldset>
+
+    <div>
+        <input type="submit" value="Verwijder" class="redJP" />
+    </div>
+
+    <br />
+    <br />
+
+    <!-- ---------------------- -->
+    <!-- Onderstaande mag ook zonder .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsPrescr/_ButtonToPrescrListPartial.cshtml" for="@Model" />
+}
+
+
+
+
+
+
+

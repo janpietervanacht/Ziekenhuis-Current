@@ -1,0 +1,82 @@
+﻿using Background.ExportFileModels;
+using Background.ExportFileModels.ClientModels;
+using BackGround.ConstantsAndEnums;
+using BackGround.ExportFileModels;
+using BackGround.ExportFileModels.InterfacesForExport;
+using System.ComponentModel;
+using System.IO;
+using System.Text.Json;
+using System.Xml.Serialization;
+
+namespace BackGround.Utilities
+{
+    internal static class Serializing  
+    {
+        // Extension Method koppelen aan Generic class InvoiceExportFileModel<T>:
+        // Zo blijft InvoiceExportFileModel<T> alleen maar properties bevatten (en krijgt dit model geen methods)
+        // internal static void SerializeToFile<T>(this FactuurExportFileModel<T> invoiceExportFileModel, string fullFileName)
+
+        // Best practice: Gebruik bij een generic bijna altijd een Where, en maak T zo specifiek mogelijk
+        // Daarmee voorkomt je dat deze generic misbruikt wordt voor andere classes dan Invoices.
+        internal static void SerializeToInvoiceFile<T>(this FactuurExportFileModel<T> invoiceExportFileModel, string fullFileName, TypeOfExport typeOfExport)
+            where T: BaseInvoice, IGenericFields 
+        {
+            StreamWriter file;
+            string jsonString;
+
+            switch (typeOfExport)
+            {
+                case TypeOfExport.XML:
+                    using (file = new StreamWriter(fullFileName))
+                    {
+                        var xmlWriter = new XmlSerializer(invoiceExportFileModel.GetType());
+                        xmlWriter.Serialize(file, invoiceExportFileModel);
+                    }
+                    break;
+                case TypeOfExport.JSON:
+                    using (file = new StreamWriter(fullFileName))
+                    {
+                        jsonString = JsonSerializer.Serialize(invoiceExportFileModel);
+                        file.WriteLine(jsonString);
+                    }
+                    break;
+                default:
+                    throw new InvalidEnumArgumentException();
+            }
+
+        }
+
+        // Best practice: Gebruik bij een generic bijna altijd een Where, en maak T zo specifiek mogelijk
+        // Daarmee voorkomt je dat deze generic misbruikt wordt voor andere classes dan Clients.
+        internal static void SerializeToClientFile<T>(this KlantExportFileModel<T> klantExportFileModel, 
+            string fullFileName, TypeOfExport typeOfExport)
+            where T : BaseClient, IGenericFields
+        {
+
+            StreamWriter file;
+            string jsonString;
+
+            switch (typeOfExport)   
+            {
+                case TypeOfExport.XML:
+                    using (file = new StreamWriter(fullFileName))
+                    {
+                        var xmlWriter = new XmlSerializer(klantExportFileModel.GetType());
+                        xmlWriter.Serialize(file, klantExportFileModel);
+                    }
+                    break;
+                case TypeOfExport.JSON:
+                    using (file = new StreamWriter(fullFileName))
+                    {
+                        jsonString = JsonSerializer.Serialize(klantExportFileModel);
+                        file.WriteLine(jsonString);
+                    }
+                    break;
+                default:
+                    throw new InvalidEnumArgumentException(); 
+            }
+
+        }
+
+    }
+}

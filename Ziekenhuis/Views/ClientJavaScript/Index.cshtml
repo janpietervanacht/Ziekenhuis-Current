@@ -1,0 +1,147 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ClientListViewModel
+<!-- Testen JQUERY: -->
+<h6 class="muisHoofer">test 1 JQuery</h6>
+<h6 id="muisHoeffer">test 2 JQuery</h6>
+<h6 class="muisHoofer">test 3 JQuery</h6>
+<h6>test 4 JQuery</h6>
+<h6 class="muisHoofer">test 5 JQuery</h6>
+<h6>test 6 JQuery</h6>
+
+<h6 class="blauwViaJquery">test 7 JQ blauw</h6>  <!-- werkt -->
+<h6 class="blauwViaJquery">test 8 JQ blauw</h6> <!-- werkt -->
+<h6 id="uniekRoodViaJQuery">test 9 JQ rood </h6> <!-- werkt -->
+
+
+<h4>
+    <span id="bruinViaJQuery">JQ - h4+span+id combi: bruin</span>
+</h4>
+
+<h6>
+    <span class="paarsViaJQuery">JQ - h6+class combi: paars</span>
+</h6>
+
+
+@if (@Model.DoctorId != null)
+{
+    <h4>Lijst met clienten voor één dokter: @Model.DoctorFullName</h4>
+}
+
+@if (@Model.DoctorId == null)
+{
+    <h4>Lijst met clienten voor alle dokteren</h4>
+}
+
+<br />
+<br />
+<!-- Html.ActionLink maakt de hele knop aan, inclusief onderwater href = " " -->
+<button type="submit" style="color: blue; font-size: 14px">
+    @Html.ActionLink("Terug naar Menu", "Index", "Home")
+</button>
+
+<table class="table table-condensed table-hover">
+
+    <tr>
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Aktie code")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Volledige naam")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Clientnummer")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Geboortedatum")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Totaal aanwezig budget")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Leeftijd in dagen")
+        </th>
+
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Aantal recepten")
+        </th>
+
+        @if (@Model.DoctorId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayName("Naam dokter")
+            </th>
+        }
+    </tr>
+
+
+
+    @foreach (var c in @Model.ClientVMList)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(i => c.Client.ActionCode)
+            </td>
+            <td>
+                @Html.DisplayFor(i => c.ClientFullName)
+            </td>
+            <td>
+                @Html.DisplayFor(i => c.Client.ClientNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(i => c.Client.BirthDate)
+            </td>
+            <td class="itemBudget">
+                @Html.DisplayFor(i => c.Client.BudgetAvaiable)
+            </td>
+            <td>
+                @Html.DisplayFor(i => c.AgeInDays)
+            </td>
+            <td>
+                @Html.DisplayFor(i => c.NrofPrescriptions)
+            </td>
+
+            @if (@Model.DoctorId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => c.DoctorFullName)
+                </td>
+            }
+
+        </tr>
+
+    }
+
+</table>
+
+<label>Totaal van alle budgetten berekend via Javascript:</label>
+<br />
+<label id="totalUsingJavascript"></label>
+<br />
+<br />
+
+<label>Totaal van alle budgetten berekend via JQuery:</label>
+<br />
+<label id="totalUsingJQuery"></label>
+<br />
+<br />
+
+<!----Specifieke JavaScript roept generieke JavaScript aan ------------------------------------ -->
+<script type="text/javascript">
+
+    window.onload =
+        function () {
+            document.getElementById("totalUsingJavascript")
+                .innerText = berekenTotaal("itemBudget"); // berekenTotaal zit in site.js
+
+            document.getElementById("totalUsingJQuery").innerText = "TOTAAL VIA JQUERY";  // later is complex
+        };
+
+
+
+</script>
+

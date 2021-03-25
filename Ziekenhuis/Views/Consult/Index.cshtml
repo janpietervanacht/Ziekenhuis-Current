@@ -1,0 +1,148 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultListViewModel
+
+
+@if (@Model.ClientId != null)
+{
+    <h4>Lijst met consulten voor één client: @Model.ClientFullName</h4>
+}
+
+@if (@Model.DoctorId != null)
+{
+    <h4>Lijst met consulten voor één dokter: @Model.DoctorFullName</h4>
+}
+
+@if (@Model.ClientId == null)
+{
+    <h4>Consulten van alle clienten</h4>
+}
+
+@if (@Model.DoctorId == null)
+{
+    <h4>Consulten van alle doctoren</h4>
+}
+
+<!-- Zowel arts als client moeten bekend zijn om het consult te kunnen maken -->
+<p>
+    @if (@Model.DoctorId != null && Model.ClientId != null)
+    {
+        <button style="font-style: italic; color: purple">
+            @Html.ActionLink($"Maak consult", "Create",
+           new { clientId = Model.ClientId, doctorId = Model.DoctorId })
+        </button>
+    }
+</p>
+
+<p>
+
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Terug naar Hoofdmenu", "Index", "Home")
+    </button>
+    <br />
+    <br />
+
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Terug naar clienten-lijst", "Index", "Client", new { doctorId = Model.DoctorId })
+    </button>
+
+</p>
+
+<table class="table table-condensed table-hover">
+    <tr>
+
+
+        <!-- Als geen client meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle clienten getoond. -->
+        @if (@Model.ClientId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.ClientFullName)
+            </th>
+        }
+        <!-- Als geen doctor meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle doctoren getoond. -->
+
+        @if (@Model.DoctorId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.DoctorFullName)
+            </th>
+        }
+
+
+        <th class="yellowJP tableHeaderJP">
+            @Html.DisplayName("Datum consult")
+        </th>
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Omschrijving consult")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Prijs consult")
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var p in @Model.ConsultList)
+    {
+        <tr>
+
+
+            @if (@Model.ClientId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => p.ClientFullName)
+                </td>
+            }
+
+
+            @if (@Model.DoctorId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => p.DoctorFullName)
+                </td>
+            }
+
+            <td>
+                @Html.DisplayFor(i => p.Consult.ConsultDate)
+            </td>
+            <td>
+                @Html.DisplayFor(i => p.Consult.ConsultDescr)
+            </td>
+
+
+            <td>
+                @Html.DisplayFor(i => p.Consult.Price)
+            </td>
+
+            <td>
+                <!-- onderstaande werkt, maar underline in knop is niet mooi -->
+                <!-- Controller naam "Prescription" zou je ook kunnen weglaten -->
+                <!-- "consId" moet overeenkomen met de parameter van de ActionResult Method Details -->
+                <button class="clickButtonJP">
+                    @Html.ActionLink("Details consult " + p.Consult.ConsultDescr,
+                   "Details", "Consult", new { consId = p.Consult.Id })
+                </button>
+            </td>
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Verwijder consult ", "Delete", new { consId = p.Consult.Id })
+                </button>
+            </td>
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Wijzig consult ", "Update", new { consId = p.Consult.Id })
+                </button>
+            </td>
+
+        </tr>
+
+    }
+
+    <tr>
+        <td></td>
+    </tr>
+</table>

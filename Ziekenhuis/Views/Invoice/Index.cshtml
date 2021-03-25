@@ -1,0 +1,200 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceListViewModel
+@using Ziekenhuis.Ziekenhuis.ViewModels
+
+<br />
+<br />
+
+@if (@Model.ClientId != null)
+{
+    <h4>Lijst met facturen voor één client: @Model.ClientFullName</h4>
+    <h4>Clientnummer: @Model.ClientNumber</h4>
+}
+
+@if (@Model.DoctorId != null)
+{
+    <h4>Lijst met facturen voor één dokter: @Model.DoctorFullName</h4>
+}
+
+@if (@Model.ClientId == null)
+{
+    <h4>Lijst met alle facturen voor alle clienten</h4>
+}
+
+@if (@Model.DoctorId == null)
+{
+    <h4>Lijst met alle facturen voor alle dokters</h4>
+}
+
+<!-- Zowel arts als client moeten bekend zijn om een factuur te kunnen maken -->
+<!-- Beide value parameters zijn niet nullable -->
+<p>
+    @if (@Model.DoctorId != null && Model.ClientId != null)
+    {
+        <button style="font-style: italic; color: purple">
+            @Html.ActionLink($"Maak factuur", "Create",
+           new { clientId = Model.ClientId, doctorId = Model.DoctorId })
+        </button>
+    }
+</p>
+
+<p>
+
+    <!-- Html.ActionLink maakt de hele knop aan, inclusief onderwater href = " " -->
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Naar Hoofdmenu", "Index", "Home")
+    </button>
+    <br />
+    <br />
+
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Naar clienten-lijst", "Index", "Client", new { doctorId = Model.DoctorId })
+    </button>
+</p>
+
+
+
+<table class="table table-condensed table-hover">
+    <tr>
+
+        <!-- Als geen client meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle clienten getoond. -->
+        @if (@Model.ClientId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.ClientFullName)
+            </th>
+        }
+        <!-- Als geen doctor meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle doctoren getoond. -->
+
+        @if (@Model.DoctorId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.DoctorFullName)
+            </th>
+        }
+
+        <th class="yellowJP tableHeaderJP">
+            @Html.DisplayName("Factuurnummer")
+        </th>
+
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Action code")
+        </th>
+
+
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Status")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Bedrag factuur")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Vervaldatum")
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var invVM in @Model.InvoiceList)
+    {
+        <tr>
+
+            @if (@Model.ClientId == null)
+            {
+                <td class="clientName">
+                    @Html.DisplayFor(i => invVM.ClientFullName)
+                </td>
+            }
+
+            @if (@Model.DoctorId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => invVM.DoctorFullName)
+                </td>
+            }
+
+            <!-- NTD: factuurnummer opmaken met leading zeroes -->
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.InvoiceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.ActionCode)
+            </td>
+            <!-- NTD: status weergeven met een Enum, ipv DataBaseWaarden VRAAG PETER -->
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.Status)
+            </td>
+
+            <td class="invAmount">
+                @Html.DisplayFor(i => invVM.Invoice.Amount)
+            </td>
+
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.DueDate)
+            </td>
+
+
+            <td>
+                <button class="clickButtonJP">
+                    @Html.ActionLink("Details factuur " + invVM.Invoice.InvoiceDescription,
+            "Details", "Invoice", new { invoiceId = invVM.Invoice.Id });
+                </button>
+            </td>
+            <!-- ------------------------------------------------------------------------------------ -->
+
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Verwijder factuur ", "Delete", new { invoiceId = invVM.Invoice.Id })
+                </button>
+            </td>
+
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Wijzig factuur ", "Update", "Invoice", new { invoiceId = invVM.Invoice.Id })
+                </button>
+            </td>
+
+        </tr>
+
+    }
+
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+
+<label style="margin: 0 20px 0 10px">Uw totalen in input control:</label>
+<!-- Berekend met javascript -->
+<input type="text" id="total1" />
+<br />
+<br />
+
+<label style="margin: 0 20px 0 10px">Uw totalen in label control:</label>
+<!-- Berekend met javascript -->
+<label id="total2"></label>
+<br />
+<br />
+
+<label style="margin: 0 20px 0 10px">Het aantal facturen:</label>
+    @Html.DisplayFor(i => i.NumberOfInvoices)     
+<br />
+<br />
+
+
+<script>
+
+    window.onload = function ()  // toevoegen van event listeners na inladen pagina
+    {
+        var totAmtAlfa = berekenTotaal("invAmount");  // Generiek: verzorgd in site.js
+        document.getElementById("total1").value = totAmtAlfa; // .innerText = "" werkt niet bij een input tag
+        document.getElementById("total2").innerText = totAmtAlfa;  // .value = "" werkt niet bij een label
+    }
+
+</script>

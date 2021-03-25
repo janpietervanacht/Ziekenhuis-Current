@@ -1,0 +1,10 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceViewModel
+
+<button class="clickButtonJP">
+    @Html.ActionLink("Naar factuur-lijst ", "Index",
+   new
+        {
+            doctorId = Model.Invoice.DoctorId,
+            clientId = Model.Invoice.ClientId
+        })
+</button>

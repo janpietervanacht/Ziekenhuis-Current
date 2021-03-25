@@ -1,0 +1,58 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using Ziekenhuis.BackGroundProcess;
+using Ziekenhuis.BackGroundProcess.Interfaces;
+using Ziekenhuis.BackGroundProcess.Managers;
+using Ziekenhuis.Business.Interfaces;
+using Ziekenhuis.DataAccess.ApplicDbContext;
+using Ziekenhuis.DataAccess.Interfaces;
+using Ziekenhuis.DataAccess.Repositories;
+
+namespace Ziekenhuis.Business.StartBackGroundProcess
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var serviceProvider = new ServiceCollection();
+
+            serviceProvider.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Scoped);
+
+
+
+            //setup our DI
+            var serviceProvider = new ServiceCollection()
+                .AddLogging()
+                .AddScoped<IInvoiceBGManager, InvoiceBGManager>()
+                .AddScoped<IInvoiceRepository, InvoiceRepository>() 
+                .BuildServiceProvider();
+
+            ////configure console logging
+            //serviceProvider
+            //    .GetService<ILoggerFactory>().
+            //    .AddConsole(LogLevel.Debug);
+
+            //var logger = serviceProvider.GetService<ILoggerFactory>()
+            //    .CreateLogger<Program>();
+            //logger.LogDebug("Starting application");
+
+            Console.WriteLine("De 3 achtergrondprocessen worden opgestart");
+
+            var invBGManager = serviceProvider.GetService<IInvoiceBGManager>();
+            var result = invBGManager.CreateOutgInvoiceFile();
+
+            //Console.WriteLine("De 3 achtergrondprocessen worden opgestart");
+
+            //var invBGManager = new InvoiceBGManager(); 
+            //var result = invBGManager.CreateOutgInvoiceFile();
+
+            Console.WriteLine(result); 
+
+            Console.ReadKey();
+        }
+    }
+}

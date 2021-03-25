@@ -1,0 +1,29 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultViewModel
+
+<div class="form-group">
+    @Html.LabelFor(p => p.Consult.ConsultDescr, htmlAttributes: new { @class = "label-for-JP" })
+    @*@Html.EditorFor(p => p.Consult.ConsultDescr, new { htmlAttributes = new { @class = "editor-for-JP" } })*@
+    @Html.TextBoxFor(p => p.Consult.ConsultDescr, new { placeholder = "Vul omschrijving in", @class = "form-control" })
+    @Html.ValidationMessageFor(p => p.Consult.ConsultDescr, "", new { @class = "text-danger" })
+
+    <br />
+    @Html.LabelFor(p => p.Consult.ConsultDate, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.Consult.ConsultDate, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(p => p.Consult.ConsultDate, "", new { @class = "text-danger" })
+    <br /><br />
+
+
+    @Html.LabelFor(p => p.Consult.CommentForDoctor, htmlAttributes: new { @class = "label-for-JP" }) <br />
+    @Html.TextAreaFor(p => p.Consult.CommentForDoctor, new { @class = "text-area-JP", placeholder = "Vul comment toe voor dit consult" })
+    @Html.ValidationMessageFor(p => p.Consult.CommentForDoctor, "", new { @class = "text-danger" })
+    <br />
+
+    <br />
+    @Html.LabelFor(p => p.Consult.Price, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.Consult.Price, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(p => p.Consult.Price, "", new { @class = "text-danger" })
+
+
+</div>
+
+<!-------------------------------------------------->

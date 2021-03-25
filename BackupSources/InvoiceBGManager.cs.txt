@@ -1,0 +1,26 @@
+﻿using System;
+using Ziekenhuis.BackGroundProcess.Interfaces;
+using Ziekenhuis.DataAccess.Interfaces;
+using Ziekenhuis.DataAccess.Repositories;
+
+namespace Ziekenhuis.BackGroundProcess.Managers
+{
+    public class InvoiceBGManager : IInvoiceBGManager
+    {
+
+        private readonly IInvoiceRepository _invoiceRepository;
+
+        public InvoiceBGManager(IInvoiceRepository invoiceRepository)
+        {
+            _invoiceRepository = invoiceRepository; 
+        }
+        //------------------------------------------------- 
+
+        public string CreateOutgInvoiceFile()
+        {
+            var listInv = _invoiceRepository.GetAllNotSend(); 
+
+            return "Return code: 00"; 
+        }
+    }
+}

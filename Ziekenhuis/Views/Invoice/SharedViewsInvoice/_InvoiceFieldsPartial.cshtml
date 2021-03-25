@@ -1,0 +1,89 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceViewModel
+<!-- First show output only fields, do not use a <fieldset disabled> block, does not work -->
+<!-- Instead, use readonly attrib -->
+
+<p>Alle gegevens: </p>
+<br />
+
+<div class="form-group">
+    @Html.LabelFor(i => i.ClientFullName, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.ClientFullName, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.DoctorFullName, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.DoctorFullName, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+<div class="form-group">
+    @Html.Label("", "Clientnummer:", htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.ClientNumber, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.Status, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.Invoice.Status, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.SendYN, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.Invoice.SendYN, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+
+
+<!---- end of readonly fields -->
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.InvoiceDescription, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(i => i.Invoice.InvoiceDescription, new
+   {
+       @class = "form-control purpleJP",
+       placeholder = "Vul hier de omschrijving in"
+   })
+    @Html.ValidationMessageFor(i => i.Invoice.InvoiceDescription, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.Amount, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(i => i.Invoice.Amount)
+    @Html.ValidationMessageFor(i => i.Invoice.Amount, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.DueDate, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(i => i.Invoice.DueDate, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(i => i.Invoice.DueDate, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(i => i.Invoice.AmountPaid, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(i => i.Invoice.AmountPaid, htmlAttributes: new { @readonly = "readonly" })
+    @Html.ValidationMessageFor(i => i.Invoice.DueDate, "", new { @class = "text-danger" })
+</div>
+
+<!-- Toon alle 3 invoice lines ----------------------------------------------------------->
+<div class="form-group">
+    @Html.Label("", "Factuur-regel 1:", htmlAttributes: new { @class = "label-for-JP" })
+    @*  @Html.LabelFor(p => p.Line1, htmlAttributes: new { @class = "label-for-JP" })*@
+    @Html.TextBoxFor(i => i.Line1, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(i => i.Line1, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.Label("", "Factuur-regel 2:", htmlAttributes: new { @class = "label-for-JP" })
+    @*  @Html.LabelFor(p => p.Line1, htmlAttributes: new { @class = "label-for-JP" })*@
+    @Html.TextBoxFor(i => i.Line2, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(i => i.Line2, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.Label("", "Factuur-regel 3:", htmlAttributes: new { @class = "label-for-JP" })
+    @*  @Html.LabelFor(p => p.Line1, htmlAttributes: new { @class = "label-for-JP" })*@
+    @Html.TextBoxFor(i => i.Line3, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(i => i.Line3, "", new { @class = "text-danger" })
+</div>
+
+
+
+

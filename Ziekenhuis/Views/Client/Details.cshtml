@@ -1,0 +1,32 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel
+@using Ziekenhuis.Model
+
+<h4>Details Client: @Model.ClientFullName</h4>
+
+@if (Model.Client.ActionCode == 'A')
+{
+    <h4>Actief</h4>
+}
+else
+{
+    <h4>Inactief</h4>
+}
+
+<fieldset disabled>
+    <legend style="font-style: italic">Details:</legend>
+    <!-- Als de shared view niet direct onder een standaard View folder staat -->
+    <!-- Bijvoorbeeld "Client" "Prescription" of "Shared" -->
+    <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
+    <partial name="GedeeldeViewsClient/_ClientFieldsPartial.cshtml" for="@Model" />
+</fieldset>
+
+<br />
+
+<partial name="GedeeldeViewsClient/_ButtonToClientListPartial" for="@Model" />
+<!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
+<!-- "Client", "Prescription", etc, en "Shared" -->
+<partial name="_ComplimentPartial" />
+
+
+

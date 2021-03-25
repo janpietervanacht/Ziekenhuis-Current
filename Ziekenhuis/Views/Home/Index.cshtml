@@ -1,0 +1,74 @@
+﻿<h4>Start menu</h4>
+
+@using (Html.BeginForm("Index",
+                      "Home",
+                      FormMethod.Post,
+                      new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload file from disk:</label>
+    <input type="file" name="file" id="file" accept=".txt, .csv, .json, .xml"/>
+    <br>
+    <br>
+
+    <input type="submit" value="Lees file in" />
+
+    <br>
+    <br>
+}
+
+
+<br />
+<br />
+<button type="submit" class="purpleJP">
+    @Html.ActionLink("Start Achtergrond", "StartBackGround", "Home")
+</button>
+
+
+
+<br />
+<br />
+<button type="submit" class="purpleJP">
+    @Html.ActionLink("Clienten Bernard", "Index", "Client", new { doctorId = 1 })
+</button>
+
+
+<br />
+<br />
+<button type="submit" class="purpleJP">
+    @Html.ActionLink("Facturen Bernard", "Index", "Invoice", new { doctorId = 1 })
+</button>
+
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Oefeningen-scherm JQUERY en JAVASCRIPT", "Index", "ClientJavaScript")
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Clienten ADMIN", "Index", "Client")
+</button>
+
+
+<br />
+<br />
+<button type="submit">
+    <!-- Facturen voor alle doctoren en alle clienten, alleen voor ADMIN: -->
+    @Html.ActionLink("Facturen ADMIN", "Index", "Invoice")
+</button>
+
+
+
+<br />
+<br />
+
+
+
+
+
+
+
+
+

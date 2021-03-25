@@ -1,0 +1,213 @@
+﻿Dit was een goed werkende source code
+Generic op Method niveau binnen de Factory class.
+In een latere versie heb ik deze code vervangen door een generic op Class Level in de Factory.
+
+-------------------------------------------
+
+Een InvoiceExportFileModel bestaat uit een header, een lijst van facturen, en een footer.
+Een factuur kan Small or Big zijn. 
+Bij een Small factuur voegen we de NAW van de client toe.
+Bij een Big factuur voegen we het gehele Client Record toe.
+
+In deze voorbeeldcode wordt een generic factory gebruikt, generic op method niveau. 
+
+--------------------------------------- 
+public interface IGeneric  // Te gebruiken voor alle soorten entiteit-bomen, niet alleen facturen
+    {
+        public string CompanyName { get; set; }
+        public string CreatedBy { get; set; }
+        public string DateTimeCreated { get; set; }
+    }
+---------------------------------------
+public enum SoortUitgFactuur   
+    {
+        Big,
+        Small
+    }
+---------------------------------------
+    public class InvoiceExportFileModel<T>
+    {
+        public Header HeaderRecord { get; set; }
+        public List<T> InvoiceList { get; set; }   // T kan een BigInvoice of SmallInvoice zijn
+        public Footer FooterRecord { get; set; }
+    }
+
+    public class Header
+    {
+        public string FileName { get; set; }
+        public string DateTimeExported { get; set; }  
+    }
+
+    public class Footer
+    {
+        public int NrofRecords { get; set;  }
+    }
+---------------------------------------
+	public class BaseInvoice 
+    // BigInvoice en SmallInvoice erven van BaseInvoice
+    // Let op: BaseInvoice voldoet NIET aan IGeneric
+    // Omdat IGeneric over alle soorten boom-entiteiten heen kan liggen (en niet alleen facturen)
+    // EN omdat we BaseInvoice niet exporteren, maar alleen SmallInvoice en BigInvoice
+    {
+        public string Reference { get; set; }
+        public string InvoiceDescription { get; set; }
+        public decimal Amount { get; set; }
+        public string DueDate { get; set; }  
+    }
+---------------------------------------
+   public class BigInvoice: BaseInvoice, IGeneric
+    {
+        // In de grote invoice exporteren we ook alle Client velden
+        // en de bijbehorende landen
+        
+        public Client Client { get; set; }
+        // Hieronder generieke velden (niet alleen voor export van facturen,
+        // maar handig voor alle soorten exports (bijv van een clienten-lijst)). 
+        // Daarom komen deze velden uit IGeneric, en niet uit de BaseInvoice klasse.
+        // BaseInvoice kent onderstaande velden niet, want we exporteren de BaseInvoice niet
+        public string CompanyName { get; set; }
+        public string CreatedBy { get; set; }
+        public string DateTimeCreated { get; set; }
+    }
+--------------------------------------- 
+ public class SmallInvoice : BaseInvoice, IGeneric
+    {
+        // In de kleine invoice exporteren we per factuur
+        // als EXTRA (zie hieronder) alleen enkele NAW data van de client, en niet de gehele Client
+        // en de bijbehorende landen
+        public string StraatVanKlant { get; set; }
+        public int HuisnummerVanKlant { get; set; }
+        public string PostcodeVanKlant { get; set; }
+        public string WoonplaatsVanKlant { get; set; }
+        public string LandVanKlant { get; set; }
+
+        // Hieronder generieke velden (niet alleen voor export van facturen,
+        // maar handig voor alle soorten exports (bijv van een clienten-lijst)). 
+        // Daarom komen deze velden uit IGeneric, en niet uit de BaseInvoice klasse.
+        // BaseInvoice kent onderstaande velden niet, want we exporteren de BaseInvoice niet
+        public string CompanyName { get; set; }
+        public string CreatedBy { get; set; }
+        public string DateTimeCreated { get; set; }
+    }
+--------------------------------------- 
+errorCode = invoiceBGManager.CreateOutgInvoiceFile(SoortUitgFactuur.Big); 
+errorCode = invoiceBGManager.CreateOutgInvoiceFile(SoortUitgFactuur.Small);
+--------------------------------------- 
+ public string CreateOutgInvoiceFile(SoortUitgFactuur soortUitgFactuur)
+        {
+            var listInv = _invoiceRepository.GetAllNotSend();  
+            var listOutgBigInv = new List<BigInvoice>();  
+            var listOutgSmallInv = new List<SmallInvoice>();   
+
+            switch (soortUitgFactuur)
+            {
+                case SoortUitgFactuur.Big:
+                    // Maak lijst van Big Invoices en vul de BASISVELDEN van ieder element van deze lijst: 
+                    listOutgBigInv = InvoiceFactory.CreateListBaseInvoice<BigInvoice>(listInv);  // aanroep van een generic factory method
+                    // Toevoegen van alle Client Gegevens aan iedere BIG factuur:
+                    for (int i = 0; i < listInv.Count; i++)
+                    {
+                        listOutgBigInv[i].Client = listInv[i].Client; // extra bovenop de basis velden (XXX)
+                    }
+                    break;
+                case SoortUitgFactuur.Small:
+                    // Maak lijst van Small Invoices en vul de BASISVELDEN van ieder element van deze lijst: 
+                    listOutgSmallInv = InvoiceFactory.CreateListBaseInvoice<SmallInvoice>(listInv); // aanroep van een generic factory method
+                    // Toevoegen van een paar klant-naw gegevens aan iedere SMALL factuur:
+                    for (int i = 0; i < listInv.Count; i++)
+                    {
+                        listOutgSmallInv[i].StraatVanKlant = listInv[i].Client.Street;
+                        listOutgSmallInv[i].HuisnummerVanKlant = listInv[i].Client.HouseNumber;
+                        listOutgSmallInv[i].PostcodeVanKlant = listInv[i].Client.PostalCode;
+                        listOutgSmallInv[i].WoonplaatsVanKlant = listInv[i].Client.City;
+                        // Let op, Country Id is een NULLABLE foreign key in entiteit Client, vandaar de
+                        // null-propagation hieronder:
+                        listOutgSmallInv[i].LandVanKlant = listInv[i].Client.Country?.CountryDescription; // kan leeg zijn
+                    }
+                    break;
+                default: 
+                    break;
+            }
+
+            switch (soortUitgFactuur)
+			{
+				case SoortUitgFactuur.Big: 
+					fileName = "Uitgaande BIG factuur.txt";
+					break; 
+				case SoortUitgFactuur.Small: 
+					fileName = "Uitgaande SMALL factuur.txt";
+					break; 
+				default:
+                    break;
+			}
+
+            switch (soortUitgFactuur)
+            {
+                case SoortUitgFactuur.Big:
+                    InvoiceExportFileModel<BigInvoice> invoiceBigExportFileModel = InvoiceFactory.CreateInvoiceExportFileModel(listOutgBigInv, fileName); // aanroep van een generic factory method
+                    break;
+                case SoortUitgFactuur.Small:
+                    InvoiceExportFileModel<SmallInvoice> invoiceSmallExportFileModel = InvoiceFactory.CreateInvoiceExportFileModel(listOutgSmallInv, fileName); // aanroep van een generic factory method
+                    break;
+                default:
+                    break;
+            }
+
+            return "00";
+        }
+-----------------------------------------------
+ public static class InvoiceFactory 
+    {
+        // Keyword new() moet je achteraan zetten, dus achteraan de WHERE CLAUSE 
+        // Let op: IGeneric wordt vermeld zowel in BigInvoice, SmallInvoice en ook hier
+        // Want anders zijn de velden CompanyName, CreatedBy en DateTimeCreated onbekend in de code hieronder. 
+
+        public static List<T> CreateListBaseInvoice<T>(List<Invoice> listInv) 
+            where T: BaseInvoice, IGeneric, new()
+        {
+            var result = new List<T>();
+
+            for (int i = 0; i < listInv.Count; i++)
+            {
+                var inv = listInv[i];
+
+                result.Add(
+                    new T   // dit werkt dankzij de new() in de where clause: 
+                    {
+                        // Stap 1: vullen velden uit de base class (typische factuur-velden, alleen nuttig binnen entiteit 'factuur')
+                        Amount = inv.Amount, 
+                        DueDate = inv.DueDate.ToString("yyyy-MM-dd"),
+                        InvoiceDescription = inv.InvoiceDescription,
+                        Reference = inv.Client.ClientNumber + "-" + inv.InvoiceNumber,
+
+                        // Stap 2: vullen velden uit de IGeneric interface (typische velden geschikt voor alle entiteiten)
+                        CompanyName = "Jan-PieterBV",
+                        CreatedBy = "USERJPVANACHT",
+                        DateTimeCreated = DateTime.Now.ToString() 
+                    }
+                    );
+            }
+            return result; 
+        }
+
+        public static InvoiceExportFileModel<T> CreateInvoiceExportFileModel<T>(List<T> listOutgInv, string fileName)
+        {
+            return new InvoiceExportFileModel<T>()
+            {
+                HeaderRecord = new Header()
+                {
+                    FileName = fileName,
+                    DateTimeExported = DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ss")
+                },
+                InvoiceList = listOutgInv, // generic
+                FooterRecord = new Footer()
+                {
+                    NrofRecords = listOutgInv.Count()
+                }
+            };
+        }
+
+    }
+
+            
+

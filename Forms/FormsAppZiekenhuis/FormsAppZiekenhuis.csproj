@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business\Business.csproj" />
+    <ProjectReference Include="..\..\Model\Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Forms\FrmDragDropListBoxToListBoxClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FrmCountryListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FrmClientListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

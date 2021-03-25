@@ -1,0 +1,505 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj",
+        "projectName": "Ziekenhuis.BackGround",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
+        "projectName": "Ziekenhuis.Business",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
+        "projectName": "Ziekenhuis.DataAccess",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "EntityFrameworkExtras.EFCore": {
+              "target": "Package",
+              "version": "[3.0.6, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
+        "projectName": "Ziekenhuis.Model",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
+        "projectName": "UnitTest",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.5, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj",
+        "projectName": "Ziekenhuis.Ziekenhuis",
+        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+              },
+              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "NLog.Appsettings.Standard": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.3, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

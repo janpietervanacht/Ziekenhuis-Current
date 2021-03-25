@@ -1,0 +1,31 @@
+﻿1) Start: CTRL PM de NuGet Package Console
+
+Algemene syntax is: 
+
+PM> 
+dotnet ef migrations add <migrationname> --project .\DataAccess\DataAccess.csproj --startup-project .\Ziekenhuis\Ziekenhuis.csproj  
+ 
+2) Maak de migratie-opdracht via de prompt in PM>  
+   * Als de SNAPSHOT veranderd is (de signatuur van de gehele database is veranderd)
+       * In de folder Hospital.DataAcces.Migrations wordt een class aangemaakt  
+       * met prefix een DateTimeStamp en SQL Tabel-aanmaak-commando's (UP en DOWN).
+   * Er is nog geen migratie uitgevoerd. Je kan in deze fase handmatig iets wijzigen aan 
+   * deze class. Zo heb ik ooit Cascade Delete moeten veranderen.
+
+2) Start het project Migrations (eerst als Startup project aanmaken)
+
+----------------------------------- 
+Voorbeeld:
+
+Kies je migratie-naam: bijv VoegDoctorIdToeAanClient
+
+Voer het volgende commando uit: 
+
+PM> dotnet ef migrations add VoegDoctorIdToeAanClient  --project .\DataAccess\DataAccess.csproj --startup-project .\Ziekenhuis\Ziekenhuis.csproj  
+Kijk of je nog iets moet aanpassen aan de Up/Down class (bijv: Cascade Delete uitschakelen)
+
+Start daarna project Migrations (maak hier eerst een startup project van op Solution Level)
+In SQL Server in tabel __EFMigrationsHistory kan je lezen welke migraties succesvol 
+zijn uitgevoerd. De migraties die in deze SQL-Server tabel staan, worden nooit meer uitgevoerd.
+
+

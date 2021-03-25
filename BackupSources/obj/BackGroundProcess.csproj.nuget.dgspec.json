@@ -1,0 +1,263 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\StartBackGroundProcess\\BackGroundProcess.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\Business.csproj",
+        "projectName": "Ziekenhuis.Business",
+        "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj",
+        "projectName": "Ziekenhuis.DataAccess",
+        "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj",
+        "projectName": "Ziekenhuis.Model",
+        "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\StartBackGroundProcess\\BackGroundProcess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\StartBackGroundProcess\\BackGroundProcess.csproj",
+        "projectName": "BackGroundProcess",
+        "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\StartBackGroundProcess\\BackGroundProcess.csproj",
+        "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\StartBackGroundProcess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\janpi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Business\\Business.csproj"
+              },
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\janpi\\OneDrive\\data Infinite Mission\\@omscholing ontwikkelaar\\Hospital\\Ziekenhuis\\Model\\Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

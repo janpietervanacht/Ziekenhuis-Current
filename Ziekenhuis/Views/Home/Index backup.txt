@@ -1,0 +1,66 @@
+﻿<h4>Start menu</h4>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Clienten-lijst ADMIN", "Index", "Client")
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Clienten-lijst Bernard", "Index", "Client", new { doctorId = 1 })
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Recepten-lijst ADMIN", "Index", "Prescription")
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Recepten-lijst Bernard", "Index", "Prescription", new { doctorId = 1 })
+</button>
+
+<br />
+<br />
+<button type="submit">
+    <!-- Consulten voor alle doctoren en alle clienten, alleen voor ADMIN: -->
+    @Html.ActionLink("Consulten-lijst ADMIN", "Index", "Consult")
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Consult-lijst Bernard", "Index", "Consult", new { doctorId = 1 })
+</button>
+
+
+<br />
+<br />
+<button type="submit">
+    <!-- Facturen voor alle doctoren en alle clienten, alleen voor ADMIN: -->
+    @Html.ActionLink("Facturen-lijst ADMIN", "Index", "Invoice")
+</button>
+
+<br />
+<br />
+<button type="submit">
+    @Html.ActionLink("Facturen-lijst Bernard", "Index", "Invoice", new { doctorId = 1 })
+</button>
+
+
+
+<br />
+<br />
+
+<
+
+
+
+
+
+
+

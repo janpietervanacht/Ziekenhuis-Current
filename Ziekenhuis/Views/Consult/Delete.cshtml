@@ -1,0 +1,28 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultViewModel
+
+<h4>Verwijder Consult</h4>
+
+@using (Html.BeginForm())
+{
+    <!-- Zonder BeginForm werkt de Submit niet en wordt dit consult niet verwijderd -->
+    @Html.AntiForgeryToken()
+
+    <fieldset disabled>
+        <legend>Details</legend>
+        <!-- Onderstaande mag ook zonder .cshtml extensie gecodeerd worden: -->
+        <partial name="SharedViewsCons/_ConsultFieldsPartial.cshtml" for="@Model" />
+    </fieldset>
+
+    
+    <br />
+
+    <div>
+        <input type="submit" value="Verwijder consult" class="redJP" />
+    </div>
+    
+    <br />
+
+    <!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsCons/_ButtonToConsListPartial" for="@Model" />
+}

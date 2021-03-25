@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\DataAccess",
+    "\\DataAccess\\Migrations",
+    "\\Forms",
+    "\\Forms\\FormsAppZiekenhuis",
+    "\\Forms\\FormsAppZiekenhuis\\Forms",
+    "\\Migration",
+    "\\Model",
+    "\\Model\\ConstantsAndEnums",
+    "\\Web API Client",
+    "\\Web API Client\\WebApiClient",
+    "\\Web API Client\\WebApiClient\\DTO-Models"
+  ],
+  "SelectedNode": "\\Forms\\FormsAppZiekenhuis\\Forms\\FrmClientListView.cs",
+  "PreviewInSolutionExplorer": false
+}

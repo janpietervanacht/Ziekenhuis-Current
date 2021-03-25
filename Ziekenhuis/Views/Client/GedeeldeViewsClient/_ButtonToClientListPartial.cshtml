@@ -1,0 +1,9 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel 
+
+<button class="clickButtonJP purpleJP">
+    @Html.ActionLink($"Ga terug naar clienten-lijst voor dokter {Model.DoctorFullName}", "Index", 
+   new
+        {
+            doctorId = Model.Client.DoctorId 
+        })
+</button>

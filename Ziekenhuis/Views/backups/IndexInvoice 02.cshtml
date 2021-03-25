@@ -1,0 +1,220 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceListViewModel
+@using Ziekenhuis.Ziekenhuis.ViewModels
+
+@if (@Model.ClientId != null)
+{
+    <h4>Lijst met facturen voor één client: @Model.ClientFullName</h4>
+}
+
+@if (@Model.DoctorId != null)
+{
+    <h4>Lijst met facturen voor één dokter: @Model.DoctorFullName</h4>
+}
+
+@if (@Model.ClientId == null)
+{
+    <h4>Lijst met alle facturen voor alle clienten</h4>
+}
+
+@if (@Model.DoctorId == null)
+{
+    <h4>Lijst met alle facturen voor alle dokters</h4>
+}
+
+<!-- Zowel arts als client moeten bekend zijn om een factuur te kunnen maken -->
+<!-- Beide value parameters zijn niet nullable -->
+<p>
+    @if (@Model.DoctorId != null && Model.ClientId != null)
+    {
+        <button style="font-style: italic; color: purple">
+            @Html.ActionLink($"Maak factuur", "Create",
+           new { clientId = Model.ClientId, doctorId = Model.DoctorId })
+        </button>
+    }
+</p>
+
+<p>
+
+    <!-- Html.ActionLink maakt de hele knop aan, inclusief onderwater href = " " -->
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Naar Hoofdmenu", "Index", "Home")
+    </button>
+    <br />
+    <br />
+
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Naar clienten-lijst", "Index", "Client", new { doctorId = Model.DoctorId })
+    </button>
+</p>
+
+
+
+<table class="table table-condensed table-hover">
+    <tr>
+
+        <!-- Als geen client meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle clienten getoond. -->
+        @if (@Model.ClientId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.ClientFullName)
+            </th>
+        }
+        <!-- Als geen doctor meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle doctoren getoond. -->
+
+        @if (@Model.DoctorId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.DoctorFullName)
+            </th>
+        }
+
+        <th class="yellowJP tableHeaderJP">
+            @Html.DisplayName("Factuurnummer")
+        </th>
+
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Action code")
+        </th>
+
+
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Status")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Bedrag factuur")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Vervaldatum")
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var invVM in @Model.InvoiceList)
+    {
+        <tr>
+
+            @if (@Model.ClientId == null)
+            {
+                <td class="clientName">
+                    @Html.DisplayFor(i => invVM.ClientFullName)
+                </td>
+            }
+
+            @if (@Model.DoctorId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => invVM.DoctorFullName)
+                </td>
+            }
+
+            <!-- NTD: factuurnummer opmaken met leading zeroes -->
+            <td class="factNum">
+                @Html.DisplayFor(i => invVM.Invoice.InvoiceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.ActionCode)
+            </td>
+            <!-- NTD: status weergeven met een Enum, ipv DataBaseWaarden VRAAG PETER -->
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.Status)
+            </td>
+
+            <td class="invAmount">
+                @Html.DisplayFor(i => invVM.Invoice.Amount)
+            </td>
+
+            <td>
+                @Html.DisplayFor(i => invVM.Invoice.DueDate)
+            </td>
+
+
+            <td>
+                <button class="clickButtonJP">
+                    @Html.ActionLink("Details factuur " + invVM.Invoice.InvoiceDescription,
+            "Details", "Invoice", new { invoiceId = invVM.Invoice.Id });
+                </button>
+            </td>
+            <!-- ------------------------------------------------------------------------------------ -->
+
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Verwijder factuur ", "Delete", new { invoiceId = invVM.Invoice.Id })
+                </button>
+            </td>
+
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Wijzig factuur ", "Update", "Invoice", new { invoiceId = invVM.Invoice.Id })
+                </button>
+            </td>
+
+        </tr>
+
+    }
+
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+<br>
+<button onclick="berekenTotaalBedrag()">Bereken totalen</button>
+<br />
+<input type="text" id="show1" disabled />
+<br />
+<input type="text" id="show2" disabled />
+<br />
+<input type="text" id="show3" disabled>
+<br />
+<input type="text" id="show4" disabled>
+<br />
+<input type="text" id="show5" disabled style="width: 1000px;">
+<br />
+
+<script>
+
+    var x = 0;
+
+    function berekenTotaalBedrag() {
+
+        var cltNameList = document.getElementsByClassName("clientName"); 
+        var factNumList = document.getElementsByClassName("factNum"); 
+
+        var invAmtList = document.getElementsByClassName("invAmount");
+        
+        document.getElementById("show1").value = x;
+        // document.getElementById("show2").value = invAmtList[x].value; // value werkt niet
+        document.getElementById("show2").value = invAmtList[x].innerText;  
+
+        // Parsefloat kent alleen integers en punten. Vervang eerst de komma door een punt:
+        var invAmtDot = invAmtList[x].innerText.replace(",", ".");
+        document.getElementById("show3").value = parseFloat(invAmtDot);
+
+
+        // document.getElementById("show3").value = parseFloat(invAmtDot).ToFixed(2); // werkt niet
+
+        // neem altijd 2 decimalen mee
+        
+        document.getElementById("show4").value = cltNameList[x].innerText; 
+
+        // ----------------------------
+        document.getElementById("show5").value =
+            "Naam: " + cltNameList[x].innerText +
+            " - FactuurNum: " + factNumList[x].innerText + 
+            " - Bedrag: " + invAmtList[x].innerText;
+        // ----------------------------
+
+        x++;
+        if (x == invAmtList.length) {
+            x = 0;
+        }
+    };
+</script>

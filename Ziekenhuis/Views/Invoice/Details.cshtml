@@ -1,0 +1,33 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.InvoiceViewModel
+
+<h4>Details factuur voor @Model.ClientFullName </h4>
+<h4 class=" purpleJP">Doctor is @Model.DoctorFullName</h4>
+
+
+
+
+<fieldset disabled>
+    <div class="form-group">
+        @Html.LabelFor(i => i.Invoice.InvoiceNumber, htmlAttributes: new { @class = "label-for-JP" })
+        @Html.TextBoxFor(i => i.Invoice.InvoiceNumber)
+    </div>
+
+    @*<legend>Details</legend>*@
+
+    <!-- Onderstaande mag ook zonder .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsInvoice/_InvoiceFieldsPartial.cshtml" for="@Model" />
+</fieldset>
+
+<br />
+<br />
+
+<!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+<partial name="SharedViewsInvoice/_ButtonToInvoiceListPartial" for="@Model" />
+
+
+
+
+
+
+

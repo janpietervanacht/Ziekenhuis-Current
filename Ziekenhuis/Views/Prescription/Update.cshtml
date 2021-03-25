@@ -1,0 +1,40 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h3 class="title-page-JP">Wijzig een recept</h3>
+
+        <!-- Alleen specifieke, gecodeerde errormessages, komen in de ValidationSummary -->
+        <!-- De foutmeldingen, afgedwongen door DataAnnotations, komen bij de velden zelf te staan -->
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <!-- Zet alle velden, die niet op scherm muteerbaar zijn in HiddenFor : NIET VERGETEN !! -->
+        <!-- Anders krijgt de controller deze velden niet meer terug -->
+
+        @Html.HiddenFor(p => p.Prescription.Id)
+        @Html.HiddenFor(p => p.Prescription.ActionCode)
+        @Html.HiddenFor(p => p.Prescription.ClientId)
+        @Html.HiddenFor(p => p.Prescription.DoctorId)
+
+        <partial name="SharedViewsPrescr/_PrescriptionFieldsPartial.cshtml" for="@Model" />
+
+        <div>
+            <input type="submit" value="Wijzig recept" />
+        </div>
+
+        <br />
+        <br />
+
+        <partial name="SharedViewsPrescr/_ButtonToPrescrListPartial" for="@Model" />
+
+    </div>
+
+}
+
+
+
+

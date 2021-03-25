@@ -1,0 +1,155 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrListViewModel
+
+
+@if (@Model.ClientId != null)
+{
+    <h4>Lijst met recepten voor één client: @Model.ClientFullName</h4>
+}
+
+@if (@Model.DoctorId != null)
+{
+    <h4>Lijst met recepten voor één dokter: @Model.DoctorFullName</h4>
+}
+
+@if (@Model.ClientId == null)
+{
+    <h4>Lijst met alle recepten voor alle clienten</h4>
+}
+
+@if (@Model.DoctorId == null)
+{
+<h4>Lijst met alle recepten voor alle dokters</h4>
+}
+
+<!-- Zowel arts als client moeten bekend zijn om een recept te kunnen maken -->
+<!-- Beide value parameters zijn niet nullable -->
+<p>
+    @if (@Model.DoctorId != null && Model.ClientId != null)
+    {
+        <button style="font-style: italic; color: purple">
+            @Html.ActionLink($"Maak recept", "Create",
+           new { clientId = Model.ClientId, doctorId = Model.DoctorId })
+        </button>
+    }
+</p>
+
+<p>
+
+    <!-- Html.ActionLink maakt de hele knop aan, inclusief onderwater href = " " -->
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Terug naar Hoofdmenu", "Index", "Home")
+    </button>
+    <br />
+    <br />
+
+    <button type="submit" style="color: blue; font-size: 14px">
+        @Html.ActionLink("Terug naar clienten-lijst", "Index", "Client", new { doctorId = Model.DoctorId })
+    </button>
+
+</p>
+
+
+<table class="table table-condensed table-hover">
+    <tr>
+        <th class="redJP tableHeaderJP purpleJP">
+            @Html.DisplayName("Recept Id")
+        </th>
+
+        <!-- Als geen client meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle clienten getoond. -->
+        @if (@Model.ClientId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.ClientFullName)
+            </th>
+        }
+        <!-- Als geen doctor meegegeven als parameter, dan worden de recepten-->
+        <!-- van alle doctoren getoond. -->
+
+        @if (@Model.DoctorId == null)
+        {
+            <th class="redJP tableHeaderJP">
+                @Html.DisplayNameFor(m => m.DoctorFullName)
+            </th>
+        }
+
+
+        <th class="yellowJP tableHeaderJP">
+            @Html.DisplayName("Datum recept")
+        </th>
+        <th class="brownJP tableHeaderJP">
+            @Html.DisplayName("Omschrijving recept")
+        </th>
+
+        <th class="blueJP tableHeaderJP">
+            @Html.DisplayName("Prijs recept")
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var p in @Model.PrescrList)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(i => p.Prescripton.Id)
+            </td>
+
+            @if (@Model.ClientId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => p.ClientFullName)
+                </td>
+            }
+
+
+            @if (@Model.DoctorId == null)
+            {
+                <td>
+                    @Html.DisplayFor(i => p.DoctorFullName)
+                </td>
+            }
+
+            <td>
+                @Html.DisplayFor(i => p.Prescripton.PrescriptionDate)
+            </td>
+            <td>
+                @Html.DisplayFor(i => p.Prescripton.PrescriptionDescr)
+            </td>
+
+            <td>
+                @Html.DisplayFor(i => p.Prescripton.Price)
+            </td>
+
+            <td>
+                <!-- onderstaande werkt, maar underline in knop is niet mooi -->
+                <!-- Controller naam "Prescription" zou je ook kunnen weglaten -->
+                <!-- prescrId moet overeenkomen met de parameter van de ActionResult Method Details -->
+                <button class="clickButtonJP">
+                    @Html.ActionLink("Details recept " + p.Prescripton.PrescriptionDescr,
+                   "Details", "Prescription", new { prescrId = p.Prescripton.Id })
+                </button>
+            </td>
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Verwijder recept ", "Delete", new { prescrId = p.Prescripton.Id })
+                </button>
+            </td>
+            <td>
+                <button class="clickButtonJP">
+                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
+                    @Html.ActionLink($"Wijzig recept ", "Update", new { prescrId = p.Prescripton.Id })
+                </button>
+            </td>
+
+        </tr>
+
+    }
+
+    <tr>
+        <td></td>
+    </tr>
+</table>

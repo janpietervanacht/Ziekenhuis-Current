@@ -1,0 +1,9 @@
+﻿using BackGround.ConstantsAndEnums;
+
+namespace Background.Interfaces
+{
+    public interface IBackGroundManager
+    {
+        void StartBackGround(); 
+    }
+}

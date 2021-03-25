@@ -1,0 +1,16 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultViewModel
+
+<h4>Details Consult</h4>
+
+<fieldset disabled>
+    <legend>Details</legend>
+    <!-- Onderstaande mag ook zonder .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsCons/_ConsultFieldsPartial.cshtml" for="@Model" />
+</fieldset>
+
+<br />
+<br />
+
+<!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+<partial name="SharedViewsCons/_ButtonToConsListPartial" for="@Model" />

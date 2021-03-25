@@ -1,0 +1,10 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ConsultViewModel
+
+<button class="clickButtonJP">
+    @Html.ActionLink("Naar consult-lijst ", "Index",
+   new
+        {
+            doctorId = Model.Consult.DoctorId,
+            clientId = Model.Consult.ClientId
+        })
+</button>

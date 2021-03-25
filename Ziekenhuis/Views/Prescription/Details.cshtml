@@ -1,0 +1,24 @@
+﻿    
+@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+<h4>Details Recept voor @Model.ClientFullName </h4>
+<h4 class=" purpleJP">Doctor is @Model.DoctorFullName</h4>
+
+<fieldset disabled>
+    <legend>Details</legend>
+    <!-- Onderstaande mag ook zonder .cshtml extensie gecodeerd worden: -->
+    <partial name="SharedViewsPrescr/_PrescriptionFieldsPartial.cshtml" for="@Model" />
+</fieldset>
+
+<br />
+<br />
+
+<!-- Onderstaande mag ook met .cshtml extensie gecodeerd worden: -->
+<partial name="SharedViewsPrescr/_ButtonToPrescrListPartial" for="@Model" />
+
+
+
+
+
+
+

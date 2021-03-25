@@ -1,0 +1,50 @@
+﻿Zie hieronder 2 forms in één view:
+Of je sorteert op prefixString, of je sorteert op subString.
+
+Onderstaande code gaat fout als je het andere inputveld niet meeneemt in de BeginForm.
+ 
+
+ @using (Html.BeginForm())
+{
+    <!-- Het hidden field, op NULL gezet, moet erbij staan -->
+    <!-- Als je dat niet doet, blijven oude parameterwaarden hangen in de POST method -->
+    <div class="form-group">
+        @Html.Hidden("SubString", null)  <!-- niet vergeten!! -->
+        @Html.EditorFor(m => m.PrefixString, new { placeholder = "Prefix clienten", @class = "form-control" })
+        &nbsp;&nbsp;   <input type="submit" value="Clienten met prefix " />
+    </div>
+    
+}
+
+@using (Html.BeginForm())
+{
+<div class="form-group">
+    <!-- Het hidden field, op NULL gezet, moet erbij staan -->
+    <!-- Als je dat niet doet, blijven oude parameterwaarden hangen in de POST method -->
+    @Html.Hidden("PrefixString", null) <!-- niet vergeten!! -->
+    @Html.EditorFor(m => m.SubString, new { placeholder = "Substring clienten", @class = "form-control" })
+    &nbsp;&nbsp; <input type="submit" value="Clienten met substring " />
+</div>
+  
+}
+
+-------------------------------------------------- 
+
+Zie hieronder de POST ACTION :
+
+ [HttpPost, ActionName("Index")]
+        public IActionResult IndexSubsetOfClients(int? doctorId, string prefixString, string subString)
+        {
+        // prefixString XOR subString is gevuld, maar nooit beiden: 
+            ModelState.Remove("PrefixString");
+            ModelState.Remove("SubString");
+
+            return RedirectToAction("Index", new
+            {
+                doctorId,
+                prefixString,
+                subString 
+            });
+        }
+
+------------------------------------------------

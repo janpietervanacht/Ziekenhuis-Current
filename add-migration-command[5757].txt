@@ -1,0 +1,7 @@
+﻿#run cmd command in folder ABF-DefaultTriggerTool.API
+dotnet ef migrations add <migrationname> --project .\DataAccess\DataAccess.csproj --startup-project .\Ziekenhuis\Ziekenhuis.csproj  
+
+
+dotnet ef migrations add CreateTables --project .\DataAccess\DataAccess.csproj --startup-project .\Ziekenhuis\Ziekenhuis.csproj  
+
+dotnet ef migrations add CreateTables --project .\DataAccess\DataAccess.csproj  

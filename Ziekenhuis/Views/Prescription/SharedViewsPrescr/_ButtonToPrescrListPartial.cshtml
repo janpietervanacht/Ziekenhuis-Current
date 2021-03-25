@@ -1,0 +1,10 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+<button class="clickButtonJP">
+    @Html.ActionLink("Naar recepten-lijst ", "Index",
+   new
+        {
+            doctorId = Model.Prescription.DoctorId,
+            clientId = Model.Prescription.ClientId
+        })
+</button>

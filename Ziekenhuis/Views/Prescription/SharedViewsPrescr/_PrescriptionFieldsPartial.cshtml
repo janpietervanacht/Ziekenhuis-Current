@@ -1,0 +1,115 @@
+﻿@model Ziekenhuis.Ziekenhuis.ViewModels.PrescrWith5LinesViewModel
+
+<!-- Neem de DoctorFullName en ClientFullName op in een EditorFor -->
+<!-- op onderstaande manier! Let ook op de READONLY--> 
+
+<!-- Als je ze niet opneemt in een editorFor worden de output velden -->
+<!-- gewist bij het tonen van footboodschappen -->
+
+<!-- Maw: De POST aktie (bij foutmeldingen) retourneert alleen velden die in een editorFor zitten -->
+
+<div class="form-group">
+    <!-- TextBoxFor geeft geen mooie kalender-hulp, EditorFor doet dit wel -->
+    @Html.LabelFor(p => p.ClientFullName, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.ClientFullName, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly"} })
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(p => p.DoctorFullName, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.DoctorFullName, new { htmlAttributes = new { @class = "editor-for-JP", @readonly = "readonly" } })
+</div>
+
+<div class="form-group">
+    <!-- TextBoxFor geeft geen mooie kalender-hulp, EditorFor doet dit wel -->
+    @Html.LabelFor(p => p.Prescription.PrescriptionDate, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.Prescription.PrescriptionDate, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(p => p.Prescription.PrescriptionDate, "", new { @class = "text-danger" })
+
+</div>
+
+
+
+
+<div class="form-group">
+    <!-- TextBoxFor geeft geen mooie kalender-hulp, EditorFor doet dit wel -->
+    @Html.LabelFor(p => p.Prescription.PrescriptionDate, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.Prescription.PrescriptionDate, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(p => p.Prescription.PrescriptionDate, "", new { @class = "text-danger" })
+
+</div>
+
+
+<div class="form-group">
+    @Html.LabelFor(p => p.Prescription.PrescriptionDescr, htmlAttributes: new { @class = "label-for-JP" })
+    <!-- OOK GOED: -->
+    @*  @Html.EditorFor(p => p.Prescription.PrescriptionDescr, new { htmlAttributes =
+        new { @class = "form-control box-JP",
+            placeholder = "Vul hier de omschrijving in" } })*@
+    @Html.TextBoxFor(p => p.Prescription.PrescriptionDescr, new
+    {
+        @class = "form-control purpleJP",
+        placeholder = "Vul hier de omschrijving in"
+    })
+    @Html.ValidationMessageFor(p => p.Prescription.PrescriptionDescr, "", new { @class = "text-danger" })
+</div>
+
+
+<div class="form-group">
+    @Html.LabelFor(p => p.Prescription.CommentForDoctor, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextAreaFor(p => p.Prescription.CommentForDoctor, new { @class = "text-area-JP" })
+    @Html.ValidationMessageFor(p => p.Prescription.CommentForDoctor, "", new { @class = "text-danger" })
+
+</div>
+
+
+
+<div class="form-group">
+    @Html.LabelFor(p => p.Prescription.Price, htmlAttributes: new { @class = "label-for-JP" })
+    @Html.EditorFor(p => p.Prescription.Price, new { htmlAttributes = new { @class = "editor-for-JP" } })
+    @Html.ValidationMessageFor(p => p.Prescription.Price, "", new { @class = "text-danger" })
+
+</div>
+
+
+
+<!-- Toon alle 5 prescription lines -->
+<div class="form-group">
+    @Html.Label("", "Recept-regel 1:", htmlAttributes: new { @class = "label-for-JP" })
+    @*  @Html.LabelFor(p => p.Line1, htmlAttributes: new { @class = "label-for-JP" })*@
+    @Html.TextBoxFor(p => p.Line1, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(p => p.Line1, "", new { @class = "text-danger" })
+</div>
+
+
+
+<div class="form-group">
+    @Html.Label("", "Recept-regel 2:", htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(p => p.Line2, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(p => p.Line2, "", new { @class = "text-danger" })
+</div>
+
+
+
+<div class="form-group">
+    @Html.Label("", "Recept-regel 3:", htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(p => p.Line3, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(p => p.Line3, "", new { @class = "text-danger" })
+</div>
+
+
+
+<div class="form-group">
+    @Html.Label("", "Recept-regel 4:", htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(p => p.Line4, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(p => p.Line4, "", new { @class = "text-danger" })
+</div>
+
+
+<div class="form-group">
+    @Html.Label("", "Recept-regel 5:", htmlAttributes: new { @class = "label-for-JP" })
+    @Html.TextBoxFor(p => p.Line5, new { @class = "form-control box-JP box-width-200-JP" })
+    @Html.ValidationMessageFor(p => p.Line5, "", new { @class = "text-danger" })
+</div>
+
+
+

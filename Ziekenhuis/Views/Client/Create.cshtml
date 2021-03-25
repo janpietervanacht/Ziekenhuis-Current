@@ -1,0 +1,49 @@
+﻿
+@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel
+
+<!-- Onderstaande werkt niet bij redisplay bij POST error scherm -->
+@*<h4 >Creëer Client voor dokter @Model.DoctorFullName</h4>*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+       
+        <!-- De Summary box toont geen foutboodschappen op property level in de Summary box-->
+        <!-- Maw de foutboodschappen vanuit Data Annotations komen bij de velden zelf -->
+
+        <!-- Als ModelState.IsValid dan vervolgen we met de complexere custom made error messages -->
+        <!-- Zoals bijvoorbeeld een check op een reguliere expressie, of een database integriteits-check -->
+        <!-- excludePropertyErrors = true -->
+
+        <!-- Alleen complexe, expliciet gecodeerde foutboodschappen tonen we in de ValidationSummary -->
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(c => c.Client.ActionCode)
+        @Html.HiddenFor(c => c.Client.DoctorId)
+
+
+        <!-- Aktiecode wordt niet getoond bij Create van een client -->
+        @*  @Html.Partial("", Model)   VEROUDERDE SYNTAX *@
+        <partial name="GedeeldeViewsClient/_ClientFieldsPartial" for="@Model" />
+
+        <br />
+        <div>
+            <input type="submit" value="Creëer client" />
+        </div>
+
+        <br />
+        <!-- Als de shared view niet direct onder een standaard View folder staat -->
+        <!-- Bijvoorbeeld "Client" "Prescription" of "Shared" -->
+        <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
+        <partial name="GedeeldeViewsClient/_ButtonToClientListPartial.cshtml" for="@Model" />
+
+        <!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
+        <!-- "Client", "Prescription", etc, en "Shared" -->
+        <partial name="_ComplimentPartial" />
+
+    </div>
+
+}
