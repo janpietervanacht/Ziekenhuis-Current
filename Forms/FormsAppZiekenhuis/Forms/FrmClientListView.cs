@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using FormsAppZiekenhuis.ViewModels;
+using System.Text.RegularExpressions;
 
 namespace FormsAppZiekenhuis
 {
@@ -18,6 +19,7 @@ namespace FormsAppZiekenhuis
         readonly IInvoiceManager _invoiceManager;
         readonly IConsultManager _consultManager;
 
+        private Client _selectedClient; 
 
         public FrmClientListView(IClientManager clientManager,
                                  ICountryManager countryManager,
@@ -61,11 +63,8 @@ namespace FormsAppZiekenhuis
                 };
                 ListViewClienten.Items.Add(listViewItem);
             }
-
             // clear detail scherm
-
             ClearDetailView(); 
-
         }
 
         private void ClearDetailView()
@@ -73,6 +72,10 @@ namespace FormsAppZiekenhuis
             LabelClientNumber2.Text = "";
             TextBoxFirstName.Text = "";
             TextBoxLastName.Text = "";
+            TextBoxInsured.Text = "";
+            TextBoxZodiac.Text = "";
+            ComboBoxSportType.Items.Clear();
+            ComboBoxSportType.Text = ""; 
             SetOffErrMsg(); 
          }
 
@@ -83,7 +86,8 @@ namespace FormsAppZiekenhuis
             TextBoxFirstName.ForeColor = Color.Black;
             TextBoxLastName.ForeColor = Color.Black;
             TextBoxInsured.ForeColor = Color.Black;
-            TextBoxInsured.Focus(); 
+            TextBoxZodiac.ForeColor = Color.Black;
+            TextBoxInsured.Focus();
         }
 
         private void SetOnErrMsg(ErrMsg errMsg)
@@ -99,10 +103,10 @@ namespace FormsAppZiekenhuis
         {
             try
             {
-                var selectedClient =  (Client) ListViewClienten.SelectedItems[0].Tag; 
-                if (selectedClient != null)
+                _selectedClient =  (Client) ListViewClienten.SelectedItems[0].Tag; 
+                if (_selectedClient != null)
                 {
-                    switch (selectedClient.IsInsured)     
+                    switch (_selectedClient.IsInsured)     
                     {
                         case true:
                             TextBoxInsured.Text = "J";  
@@ -112,10 +116,10 @@ namespace FormsAppZiekenhuis
                             TextBoxInsured.Text = "N";
                             break;
                     }
-                    LabelClientNumber2.Text = selectedClient.ClientNumber.ToString().PadLeft(6, '0'); 
-                    TextBoxFirstName.Text = selectedClient.FirstName;
-                    TextBoxLastName.Text = selectedClient.LastName;
-                    TextBoxZodiac.Text = selectedClient.AstrologyZodiacSign;
+                    LabelClientNumber2.Text = _selectedClient.ClientNumber.ToString().PadLeft(6, '0'); 
+                    TextBoxFirstName.Text = _selectedClient.FirstName;
+                    TextBoxLastName.Text = _selectedClient.LastName;
+                    TextBoxZodiac.Text = _selectedClient.AstrologyZodiacSign;
 
                     // Vul de comboBox met alle typen sporters:
 
@@ -139,10 +143,9 @@ namespace FormsAppZiekenhuis
                     };
 
                     // Zet de default waarde van de combo-box op het sportType van selectedClient
-                    int index = (int) Enum.Parse(typeof(SportType), selectedClient.TypeOfSporter);
+                    int index = (int) Enum.Parse(typeof(SportType), _selectedClient.TypeOfSporter);
 
                     ComboBoxSportType.SelectedIndex = index; 
-
                 }
             }
             catch (Exception)
@@ -152,8 +155,84 @@ namespace FormsAppZiekenhuis
 
         private void ButtonUpdateClient_Click(object sender, EventArgs e)
         {
+            if (_selectedClient != null)
+            {
+                SetOffErrMsg();
+                ReformatAllFields();
+                var success = CheckAllFields();
+                if (success)
+                {
+                    UpdateClient();
+                    // reload
+                    FrmClientListView_Load(null, null);
+                }
+                // Bij geen succes, geen reload
+            }
+        }
+
+        private void UpdateClient()
+        {
+            switch (TextBoxInsured.Text)
+            {
+                case "J":
+                    _selectedClient.IsInsured = true;
+                    break;
+                case "N":
+                    _selectedClient.IsInsured = false;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(); 
+            }
+
+            _selectedClient.FirstName = TextBoxFirstName.Text;
+            _selectedClient.LastName = TextBoxLastName.Text;
+            _selectedClient.AstrologyZodiacSign = TextBoxZodiac.Text;
+
+            var sportTypeVM = (SportTypeVM) ComboBoxSportType.SelectedItem;
+            _selectedClient.TypeOfSporter = sportTypeVM.SportType.ToString();
+            _clientManager.UpdateClient(_selectedClient);
+        }
+
+        private void ReformatAllFields()
+        {
+            TextBoxFirstName.Text = TextBoxFirstName.Text.Trim(); 
+            TextBoxLastName.Text = TextBoxLastName.Text.Trim();
+            TextBoxInsured.Text = TextBoxInsured.Text.Trim();
+            TextBoxZodiac.Text = TextBoxZodiac.Text.Trim();
+
+            // Haal overbodige spaties weg, en haal tussenliggende spaties weg, en maakt van eerste karakter een hoofdletter
+            TextBoxFirstName.Text = ReformatTextString(TextBoxFirstName.Text); 
+            TextBoxLastName.Text = ReformatTextString(TextBoxLastName.Text);
+            TextBoxZodiac.Text = ReformatTextString(TextBoxZodiac.Text);
+            TextBoxInsured.Text = ReformatTextString(TextBoxInsured.Text); 
+        }
+
+        private string ReformatTextString(string text)
+        {
+            // Remove leading and trailing spaces
+            var result = text.Trim();
+            // Vervang alle tussenliggende meervoudige spaces (2 of meer) door één space
+            result = Regex.Replace(result, " {2,}", " ");
+
+            // Maak van 1e karakter een hoofdletter 
+
+            string firstChar = "";
+
+            if (result.Length > 0)
+            {
+                firstChar = result[0].ToString().ToUpper();
+            }
+
+            if (result.Length > 1)
+            {
+                result = firstChar.ToString() + result.Substring(1);
+            }
+            return result; 
+        }
+
+        private bool CheckAllFields()
+        {
             ErrMsg errMsg;
-            SetOffErrMsg();
 
             errMsg = Check.CheckField(FieldName.IsInsured, TextBoxInsured.Text);
             if (errMsg.ErrorId != "00")
@@ -161,7 +240,7 @@ namespace FormsAppZiekenhuis
                 SetOnErrMsg(errMsg);
                 TextBoxInsured.Focus();
                 TextBoxInsured.ForeColor = Color.Red;
-                return;
+                return false; 
             }
 
             errMsg = Check.CheckField(FieldName.FirstName, TextBoxFirstName.Text);
@@ -169,8 +248,8 @@ namespace FormsAppZiekenhuis
             {
                 SetOnErrMsg(errMsg);
                 TextBoxFirstName.Focus();
-                TextBoxFirstName.ForeColor = Color.Red; 
-                return; 
+                TextBoxFirstName.ForeColor = Color.Red;
+                return false;
             }
 
             errMsg = Check.CheckField(FieldName.LastName, TextBoxLastName.Text);
@@ -179,7 +258,7 @@ namespace FormsAppZiekenhuis
                 SetOnErrMsg(errMsg);
                 TextBoxLastName.Focus();
                 TextBoxLastName.ForeColor = Color.Red;
-                return;
+                return false;
             }
 
             // Sterrenbeeld moet kloppen:
@@ -188,11 +267,12 @@ namespace FormsAppZiekenhuis
             if (errMsg.ErrorId != "00")
             {
                 SetOnErrMsg(errMsg);
-                TextBoxLastName.Focus();
-                TextBoxLastName.ForeColor = Color.Red;
-                return;
+                TextBoxZodiac.Focus();
+                TextBoxZodiac.ForeColor = Color.Red;
+                return false;
             }
 
+            return true; 
         }
     }
 }

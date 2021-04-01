@@ -1,6 +1,5 @@
 ﻿using FormsAppZiekenhuis.ConstantsAndEnums;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -59,25 +58,7 @@ namespace FormsAppZiekenhuis.FieldChecks
             return errMsg;
 
         }
-
-        //private static ErrMsg CheckZodiac(string fieldContent)
-        //{
-        //    var errMsg = new ErrMsg();
-
-        //    var match = Enum.IsDefined(typeof(AstrologyZodiacSign), fieldContent.Trim());
-        //    if (match)
-        //    {
-        //        errMsg.ErrorId = "00";
-        //    }
-        //    else
-        //    {
-        //        errMsg.ErrorId = "03";
-        //        errMsg.ErrorMessage = $"String \"{fieldContent}\"is geen geldig sterrenbeeld:";
-        //    }
-
-        //    return errMsg; 
-
-        //}
+             
 
         private static ErrMsg CheckListOfStrings(string fieldContent, params string[] parmList)
         {
