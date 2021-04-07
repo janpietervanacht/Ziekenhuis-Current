@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace Ziekenhuis.CRUD_API.DTO_Models
+namespace CRUD_API.DTO_Models
 {
     // Niet alle clientgegevens mogen worden opgestuurd
     // Slechts de belangrijkste velden
@@ -50,6 +50,12 @@ namespace Ziekenhuis.CRUD_API.DTO_Models
 
         [Required(ErrorMessage = "\"Verbruikt budget\" is verplicht")]
         public decimal BudgetSpent { get; set; }
+
+        [Required]
+        public string AstrologyZodiacSign { get; set; }
+
+        [Required]
+        public string TypeOfSporter { get; set; }
 
         public string CommentForDoctor { get; set; }
 

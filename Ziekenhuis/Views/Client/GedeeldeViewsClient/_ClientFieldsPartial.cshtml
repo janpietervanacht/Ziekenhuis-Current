@@ -24,10 +24,10 @@
 <div class="form-group">
     @Html.LabelFor(c => c.Client.FirstName)
     <div class="col-md-10">
-         @Html.TextBoxFor(c => c.Client.FirstName, new { placeholder = "Vul voornaam in", @class = "form-control" })
-    @Html.ValidationMessageFor(c => c.Client.FirstName, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(c => c.Client.FirstName, new { placeholder = "Vul voornaam in", @class = "form-control" })
+        @Html.ValidationMessageFor(c => c.Client.FirstName, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <div class="form-group">
@@ -56,7 +56,7 @@
         @Html.ValidationMessageFor(c => c.Client.LastName, "", new { @class = "text-danger" })
     </div>
 
-   
+
 </div>
 
 <div class="form-group">
@@ -66,7 +66,7 @@
         @Html.TextBoxFor(c => c.Client.Street, new { placeholder = "Vul straat in", @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Client.Street, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <div class="form-group">
@@ -78,7 +78,7 @@
         @Html.TextBoxFor(c => c.Client.HouseNumber, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(c => c.Client.HouseNumber, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 <div class="form-group">
     @Html.LabelFor(c => c.Client.PostalCode, htmlAttributes:
@@ -87,7 +87,7 @@
         @Html.EditorFor(c => c.Client.PostalCode, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(c => c.Client.PostalCode, "", new { @class = "text-danger" })
     </div>
-   
+
 
 </div>
 <div class="form-group">
@@ -98,7 +98,7 @@
         @Html.TextBoxFor(c => c.Client.City, new { placeholder = "Vul plaats in", @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Client.City, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <!-- In de ClientViewModel wordt naast de client ook een lijst van alle landen meegegeven-->
@@ -114,16 +114,28 @@
 </div>
 
 
-@*<div class="form-group">
-        @Html.LabelFor(c => c.Client.Country)
-        @Html.TextBoxFor(c => c.Client.Country, new { placeholder = "Vul land in", @class = "form-control" })
-        @Html.ValidationMessageFor(c => c.Client.Country, "", new { @class = "text-danger" })
-    </div>*@
+<!-- In de ClientViewModel wordt naast de client ook een lijst van alle sterrenbeelden meegegeven-->
+<!-- zodat je een dropdownlist van sterrenbeelden kan laten zien -->
 
+<div class="form-group">
+    @Html.Label("Sterrenbeeld:")
+    <div class="col-md-10">
+        @Html.DropDownListFor(c => c.ZodiacId,
+                new SelectList(Model.AstrologyZodiacSignList, "Id", "AstrologyZodiacSign"),
+                new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(c => c.Client.CountryId, "", new { @class = "text-danger" })*@
+    </div>
+</div>
 
-
-
-
+<div class="form-group">
+    @Html.Label("Soort sporter:")
+    <div class="col-md-10">
+        @Html.DropDownListFor(c => c.SportTypeId,
+                new SelectList(Model.SportTypeList, "Id", "TypeOfSporter"),
+                new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(c => c.Client.CountryId, "", new { @class = "text-danger" })*@
+    </div>
+</div>
 
 
 <div class="form-group">
@@ -133,7 +145,7 @@
         @Html.EditorFor(c => c.Client.BirthDate, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(c => c.Client.BirthDate, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <div class="form-group">
@@ -143,7 +155,7 @@
         @Html.EditorFor(c => c.Client.BudgetAvaiable, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(c => c.Client.BudgetAvaiable, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <div class="form-group">
@@ -163,7 +175,7 @@
         @Html.TextAreaFor(c => c.Client.CommentForDoctor, new { @class = "form-control" })
         @Html.ValidationMessageFor(c => c.Client.CommentForDoctor, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>
 
 <br />
@@ -174,5 +186,5 @@
         @Html.EditorFor(c => c.Client.PolicyNumber, new { htmlAttributes = new { @class = "form-control" } })
         @Html.ValidationMessageFor(c => c.Client.PolicyNumber, "", new { @class = "text-danger" })
     </div>
-   
+
 </div>

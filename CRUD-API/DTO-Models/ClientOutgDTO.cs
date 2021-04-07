@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Ziekenhuis.CRUD_API.DTO_Models
+namespace CRUD_API.DTO_Models
 {
     // Niet alle clientgegevens exporteren we naar buiten
     // Bijv Id blijft intern
@@ -42,6 +42,11 @@ namespace Ziekenhuis.CRUD_API.DTO_Models
         public decimal BudgetAvaiable { get; set; }
 
         public decimal BudgetSpent { get; set; }
+
+        public string AstrologyZodiacSign { get; set; }
+
+        public string TypeOfSporter { get; set; }
+
 
         // Afgeleide velden: ------------------------------------------------
         public int NrOfActiveInvoices { get; set; } // Als dit 0 is, laten we dit veld weg

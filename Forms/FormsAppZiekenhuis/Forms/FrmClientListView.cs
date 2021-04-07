@@ -163,6 +163,7 @@ namespace FormsAppZiekenhuis
                 if (success)
                 {
                     UpdateClient();
+                    _selectedClient = null; 
                     // reload
                     FrmClientListView_Load(null, null);
                 }

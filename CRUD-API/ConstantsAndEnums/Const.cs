@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Ziekenhuis.CRUD_API.ConstantsAndEnums
+namespace CRUD_API.ConstantsAndEnums
 {
     public static class Const
     {

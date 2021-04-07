@@ -330,15 +330,15 @@ namespace Ziekenhuis.DataAccess.Repositories
                 //-------------------------------------------- 
                 // Onderstaande werkt ook goed (NIET VERWIJDEREN):
 
-                //_dbContext.Clients.Remove(clt);
-                //_dbContext.SaveChanges();
-                //success = true;
-                //--------------------------------------------
+                _dbContext.Clients.Remove(clt);
+                _dbContext.SaveChanges();
+                success = true;
+                // --------------------------------------------
 
                 // Gebruik niet _dbContext.Clients.FromSqlRaw maar onderstaande: _dbContext.Database.ExecuteSqlRaw
                 // want je retourneert geen clienten 
-                
-                var result = _dbContext.Database.ExecuteSqlRaw($"EXECUTE dbo.uspDeleteClientByClientNumber {clientNumber}");
+
+                // var result = _dbContext.Database.ExecuteSqlRaw($"EXECUTE dbo.uspDeleteClientByClientNumber {clientNumber}");
                 success = true;
 
                 var txt = $"Method DeleteByClientNumber: Client \"{clt.FirstName} {clt.LastName}\" " +

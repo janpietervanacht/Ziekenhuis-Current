@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Ziekenhuis.CRUD_API.DTO_Models;
+using CRUD_API.DTO_Models;
 using Ziekenhuis.Model;
 
 // LEERMOMENT: Naam van de Namespace moet anders zijn dan de naam van de class

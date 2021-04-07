@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Ziekenhuis.CRUD_API.ConstantsAndEnums;
-using Ziekenhuis.CRUD_API.DTO_Models;
+using CRUD_API.ConstantsAndEnums;
+using CRUD_API.DTO_Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -228,9 +228,9 @@ namespace Ziekenhuis.CRUD_API.Controllers
             {
                 client.CountryId = country.Id;
             }
-            else  // Nederland toekennen als land
+            else  // Land is optioneel, geen land toevoegen
             {
-                client.CountryId = Const.cCountryIdNederland;
+                client.CountryId = null; 
             }
 
             // Tabel met nummer - reeksen kent maar 1 record:
@@ -283,6 +283,10 @@ namespace Ziekenhuis.CRUD_API.Controllers
                 countryDescription = _countryRepository
                     .GetCountryById(client.CountryId.Value)
                     .CountryDescription;
+            }
+            else
+            {
+                countryDescription = null; 
             }
 
             var invList = _invoiceRepository

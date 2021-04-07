@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Ziekenhuis.Business.Interfaces;
+using Ziekenhuis.ConstantsAndEnums;
 using Ziekenhuis.Model;
 using Ziekenhuis.Models;
+using Ziekenhuis.ViewModels.SubModels;
 using Ziekenhuis.Ziekenhuis.Controllers.ErrorChecks;
 using Ziekenhuis.Ziekenhuis.Controllers.MappingExtensions;
 using Ziekenhuis.Ziekenhuis.ViewModels;
@@ -158,7 +160,7 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                $"met substring \"{subString}\" ");
                 _logger.LogError($"ERROR INFO VAN JPVA - Er werden {result.ClientVMList.Count} cliënten getoond");
             }
-           
+
 
             result.PrefixString = null;
             result.SubString = null;
@@ -221,6 +223,13 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             // Alle landen toevoegen aan CREATE scherm, ivm dropdownlist
             cltVM.Countries = _countryManager.GetAllCountries();
 
+            CreateListOfZodiacs(cltVM); // cltVM is call by reference 
+            CreateListOfSportTypes(cltVM); // cltVM is call by reference 
+
+            // Toon het eerste sterrenbeeld / sport type
+            cltVM.ZodiacId = 0; 
+            cltVM.SportTypeId = 0; 
+
             // Neem doctorId mee als hidden field in de view
             // Immers als we de Terug knop aanraken willen we weer de clienten lijst zien voor deze dokter
             if (doctorId.HasValue)
@@ -247,6 +256,37 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
 
             return View(cltVM);
 
+        }
+
+        private static void CreateListOfSportTypes(ClientViewModel cltVM)
+        {
+            var listSportType = Enum.GetValues(typeof(SportType)).Cast<SportType>().ToList();
+           
+            var listSportTypeVM = listSportType
+                .Select(sportType => new SportTypeVM
+                {
+                    Id = (int)sportType,
+                    TypeOfSporter = sportType.ToString()
+                }
+                ).ToList();
+
+            cltVM.SportTypeList = listSportTypeVM;
+
+        }
+
+        private static void CreateListOfZodiacs(ClientViewModel cltVM)
+        {
+            var listZodiac = Enum.GetValues(typeof(AstrologyZodiacSign)).Cast<AstrologyZodiacSign>().ToList();
+
+            var listZodiacVM = listZodiac
+                .Select(zodiac => new ZodiacVM
+                {
+                    Id = (int)zodiac,
+                    AstrologyZodiacSign = zodiac.ToString()
+                }
+                ).ToList();
+
+            cltVM.AstrologyZodiacSignList = listZodiacVM;
         }
 
         //------------------------------------------------------------------- 
@@ -328,11 +368,55 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             cltVM.AgeInDays = (int)(DateTime.Today.Subtract(clt.BirthDate)).TotalDays;
             cltVM.NrofPrescriptions = _clientManager.GetNrOfPrescrPerClient(clt.Id);
             cltVM.DoctorFullName = _clientManager.DoctorFullName(clt.DoctorId);
-            // Voeg alle landen toe aan dit detail record. 
-            // Ook al is de dropdownlist uitgeschakeld, is dit toch nodig
-            cltVM.Countries = _countryManager.GetAllCountries();
+
+            // Haal land van client op
+            RetrieveCountryOfClient(clt, cltVM);
+
+            // In de dropdownlist toon je alleen het sterrenbeeld van deze client
+            // maak de dropdownlist van 1 element:
+            RetrieveSportTypeVMAndZodiacVMOfClient(clt, cltVM);
 
             return View(cltVM);
+        }
+
+        private static void RetrieveSportTypeVMAndZodiacVMOfClient(Client clt, ClientViewModel cltVM)
+        {
+            // Als er één Zodiac / één Sport Type getoond moet worden (bij Details en Delete)
+            // maken we een dropdown list van één element
+            cltVM.AstrologyZodiacSignList = new List<ZodiacVM>
+            {
+                new ZodiacVM
+                {
+                    Id = 1,
+                    AstrologyZodiacSign = clt.AstrologyZodiacSign
+                }
+            };
+            cltVM.ZodiacId = 1; 
+
+            // Idem voor het sport type:
+            cltVM.SportTypeList = new List<SportTypeVM>
+            {
+                new SportTypeVM
+                {
+                    Id = 1,
+                    TypeOfSporter = clt.TypeOfSporter
+                }
+            };
+            cltVM.SportTypeId = 1;
+        }
+
+        private static void RetrieveCountryOfClient(Client clt, ClientViewModel cltVM)
+        {
+            // Bepaal het land van deze client
+            var country = new Country();
+            // Land is niet verplicht, null propagation
+            country.Id = clt.CountryId.GetValueOrDefault();
+            country.CountryCodeISO = clt.Country?.CountryCodeISO;
+            country.CountryDescription = clt.Country?.CountryDescription;
+
+            // In de dropdownlist toon je alleen het land van deze client
+            // maak de dropdownlist van 1 element:
+            cltVM.Countries = new List<Country>() { country };
         }
 
         //-------------------------------------------------------------------
@@ -350,9 +434,9 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             cltVM.NrofPrescriptions = _clientManager.GetNrOfPrescrPerClient(clt.Id);
             cltVM.DoctorFullName = _clientManager.DoctorFullName(clt.DoctorId);
 
-            // Voeg alle landen toe aan dit Delete record. 
-            // Ook al is de dropdownlist uitgeschakeld, is dit toch nodig
-            cltVM.Countries = _countryManager.GetAllCountries();
+            RetrieveCountryOfClient(clt, cltVM);
+
+            RetrieveSportTypeVMAndZodiacVMOfClient(clt, cltVM);
 
             return View(cltVM);
         }
@@ -400,8 +484,24 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             cltVM.AgeInDays = (int)(DateTime.Today.Subtract(clt.BirthDate)).TotalDays;
             cltVM.NrofPrescriptions = _clientManager.GetNrOfPrescrPerClient(clt.Id);
             cltVM.DoctorFullName = _clientManager.DoctorFullName(clt.DoctorId);
-            // Alle landen toevoegen aan CREATE scherm, ivm dropdownlist
+
+            // Alle landen toevoegen aan UPDATE scherm, ivm dropdownlist
+            // TODO: hoe toon ik het land van deze client als default? 
             cltVM.Countries = _countryManager.GetAllCountries();
+
+            CreateListOfZodiacs(cltVM); // cltVM is call by reference 
+ 
+            //  zoek index in Enum op van de betreffende sterrenbeeld
+            //  zodat deze als eerste wordt getoond in de view: 
+            AstrologyZodiacSign zodiacSign = (AstrologyZodiacSign)Enum.Parse(typeof(AstrologyZodiacSign), clt.AstrologyZodiacSign);
+            cltVM.ZodiacId = (int)zodiacSign; 
+
+            CreateListOfSportTypes(cltVM); // cltVM is call by reference  
+
+            //  zoek index in Enum op van de betreffende sterrenbeeld
+            //  zodat deze als eerste wordt getoond in de view: 
+            SportType sportType = (SportType)Enum.Parse(typeof(SportType), clt.TypeOfSporter);
+            cltVM.SportTypeId = (int)sportType;
 
             return View(cltVM);
         }

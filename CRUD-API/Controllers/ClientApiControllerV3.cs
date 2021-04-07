@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Ziekenhuis.CRUD_API.ConstantsAndEnums;
-using Ziekenhuis.CRUD_API.DTO_Models;
+using CRUD_API.ConstantsAndEnums;
+using CRUD_API.DTO_Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
