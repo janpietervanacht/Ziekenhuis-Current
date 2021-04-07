@@ -228,7 +228,9 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
 
             // Toon het eerste sterrenbeeld / sport type
             cltVM.ZodiacId = 0; 
-            cltVM.SportTypeId = 0; 
+            cltVM.SportTypeId = 0;
+            cltVM.Client.AstrologyZodiacSign = "x";  // Om te voorkomen dat dit veld NULL wordt in ModelState
+            cltVM.Client.TypeOfSporter = "x"; // Om te voorkomen dat dit veld NULL wordt in ModelState 
 
             // Neem doctorId mee als hidden field in de view
             // Immers als we de Terug knop aanraken willen we weer de clienten lijst zien voor deze dokter
@@ -292,7 +294,7 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
         //------------------------------------------------------------------- 
 
         // POST is altijd het gevolg van een SUBMIT op FORM niveau. 
-        // POST: Client/Create: Als je op Save Button drukt, POST je de nieuwe 
+        // CREATE POST: Client/Create: Als je op Save Button drukt, POST je de nieuwe 
         // gegevens terug naar de controller. 
 
 
@@ -312,6 +314,9 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                 // Geef de lijst van landen weer terug aan de view
                 // Zo niet, dan klapt de applicatie en werkt de dropdownlist niet
                 cltVM.Countries = _countryManager.GetAllCountries(); // deze werkt wel 
+                // Idem voor de andere drop down lijsten
+                CreateListOfZodiacs(cltVM); // cltVM is call by reference 
+                CreateListOfSportTypes(cltVM); // cltVM is call by reference 
 
                 return View(cltVM);
             }
@@ -336,6 +341,14 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                 cltVM.Countries = _countryManager.GetAllCountries();
                 return View(cltVM);
             }
+
+            // Zet cltVM.ZodiacId (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.AstrologyZodiacSign
+            // Zet cltVM.TypeOfSporter (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.TypeOfSporter
+            var zodiacSign = (AstrologyZodiacSign)cltVM.ZodiacId;
+            cltVM.Client.AstrologyZodiacSign = zodiacSign.ToString();
+
+            var sportType = (SportType)cltVM.SportTypeId;
+            cltVM.Client.TypeOfSporter = sportType.ToString();
 
             var clt = cltVM.ToClient();
             // clt.Id: geen waarde geven bij Create
@@ -528,6 +541,12 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                 // Anders klapt de applicatie eruit
                 cltVM.Countries = _countryManager.GetAllCountries();
 
+                // Geef opnieuw alle sterrenbeelden mee terug, zodat de dropdownlist blijft werken
+                // Anders klapt de applicatie eruit.
+                // Idem voor SportTypes
+                CreateListOfZodiacs(cltVM); // cltVM is call by reference 
+                CreateListOfSportTypes(cltVM); // cltVM is call by reference  
+
                 return View(cltVM);
             }
 
@@ -548,9 +567,20 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                 // Geef opnieuw alle countries mee terug, zodat de dropdownlist blijft werken
                 // Anders klapt de applicatie eruit
                 cltVM.Countries = _countryManager.GetAllCountries();
+                CreateListOfZodiacs(cltVM); // cltVM is call by reference 
+                CreateListOfSportTypes(cltVM); // cltVM is call by reference  
 
                 return View(cltVM);
             }
+
+            // Zet cltVM.ZodiacId (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.AstrologyZodiacSign
+            // Zet cltVM.TypeOfSporter (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.TypeOfSporter
+
+            var zodiacSign = (AstrologyZodiacSign) cltVM.ZodiacId;
+            cltVM.Client.AstrologyZodiacSign = zodiacSign.ToString();
+
+            var sportType = (SportType) cltVM.SportTypeId;
+            cltVM.Client.TypeOfSporter = sportType.ToString();
 
             // converteer cltVM naar clt via extension method
             var clt = cltVM.ToClient();

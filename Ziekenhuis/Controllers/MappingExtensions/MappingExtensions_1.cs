@@ -56,7 +56,9 @@ namespace Ziekenhuis.Ziekenhuis.Controllers.MappingExtensions
                     BudgetAvaiable = clt.BudgetAvaiable,
                     BudgetSpent = clt.BudgetSpent,
                     CommentForDoctor = clt.CommentForDoctor,
-                    PolicyNumber = clt.PolicyNumber
+                    PolicyNumber = clt.PolicyNumber,
+                    AstrologyZodiacSign = clt.AstrologyZodiacSign,
+                    TypeOfSporter = clt.TypeOfSporter
                 }
                 
             };
@@ -88,7 +90,9 @@ namespace Ziekenhuis.Ziekenhuis.Controllers.MappingExtensions
                 BudgetAvaiable = cltVM.Client.BudgetAvaiable,
                 BudgetSpent = cltVM.Client.BudgetSpent,
                 CommentForDoctor = cltVM.Client.CommentForDoctor,
-                PolicyNumber = cltVM.Client.PolicyNumber
+                PolicyNumber = cltVM.Client.PolicyNumber,
+                AstrologyZodiacSign = cltVM.Client.AstrologyZodiacSign,
+                TypeOfSporter = cltVM.Client.TypeOfSporter
             };
 
             return result; 

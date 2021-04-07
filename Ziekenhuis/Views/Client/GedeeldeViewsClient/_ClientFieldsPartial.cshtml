@@ -106,6 +106,11 @@
 <div class="form-group">
     @Html.Label("Land:")
     <div class="col-md-10">
+        <!-- c.Client.CountryId wordt gekoppeld aan de 2e parameter van de SelectList -->
+        <!-- c.Client.CountryId NIET als HiddenFor opnemen in de cshtml! -->
+        <!-- daardoor wordt bij Update View de juiste Country getoond midden in de combobox -->
+        <!-- en wordt in de POST method de nieuwe waarde van c.Client.CountryId teruggegeven-->
+        <!-- De 2e en 3e parameter van de SelectList zijn properties van class Country -->
         @Html.DropDownListFor(c => c.Client.CountryId,
                 new SelectList(Model.Countries, "Id", "CountryDescription"),
                 new { @class = "form-control" })
@@ -120,10 +125,17 @@
 <div class="form-group">
     @Html.Label("Sterrenbeeld:")
     <div class="col-md-10">
+        <!-- c.ZodiacId wordt gekoppeld aan de 2e parameter van de SelectList -->
+        <!-- c.ZodiacId NIET als HiddenFor opnemen in de cshtml! -->
+        <!-- daardoor wordt bij Update View de juiste ZodiacVM getoond midden in de combobox -->
+        <!-- en wordt in de POST method de nieuwe waarde van c.ZodiacId teruggegeven -->
+        <!-- De 2e en 3e parameter van de SelectList zijn properties van class ZodiacVM -->
+        <!-- op het scherm wordt de 3e parameter getoond -->
         @Html.DropDownListFor(c => c.ZodiacId,
                 new SelectList(Model.AstrologyZodiacSignList, "Id", "AstrologyZodiacSign"),
                 new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(c => c.Client.CountryId, "", new { @class = "text-danger" })*@
+        @Html.ValidationMessageFor(c => c.ZodiacId, "", new { @class = "text-danger" })
+
     </div>
 </div>
 
@@ -133,7 +145,7 @@
         @Html.DropDownListFor(c => c.SportTypeId,
                 new SelectList(Model.SportTypeList, "Id", "TypeOfSporter"),
                 new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(c => c.Client.CountryId, "", new { @class = "text-danger" })*@
+        @Html.ValidationMessageFor(c => c.SportTypeId, "", new { @class = "text-danger" })
     </div>
 </div>
 

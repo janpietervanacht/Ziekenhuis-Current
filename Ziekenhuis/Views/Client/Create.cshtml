@@ -8,42 +8,49 @@
 {
     @Html.AntiForgeryToken()
 
+<div>
+
+    <!-- De Summary box toont geen foutboodschappen op property level in de Summary box-->
+    <!-- Maw de foutboodschappen vanuit Data Annotations komen bij de velden zelf -->
+    <!-- Als ModelState.IsValid dan vervolgen we met de complexere custom made error messages -->
+    <!-- Zoals bijvoorbeeld een check op een reguliere expressie, of een database integriteits-check -->
+    <!-- excludePropertyErrors = true -->
+    <!-- Alleen complexe, expliciet gecodeerde foutboodschappen tonen we in de ValidationSummary -->
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <!-- Zet alle velden, die niet op scherm muteerbaar zijn in HiddenFor : NIET VERGETEN !! -->
+    <!-- Anders krijgt de controller deze velden niet meer terug in de POST aktie -->
+    <!-- en komt ook ModelState voor deze velden op false, zeker als het veld [required] is -->
+    <!-- Let op, velden die je wel muteert, niet in HiddenFor zetten  -->
+    <!-- In het bijzonder het sleutelveld van de Dropdownlists -->
+
+    @Html.HiddenFor(c => c.Client.ActionCode)
+    @Html.HiddenFor(c => c.Client.DoctorId)
+
+    @Html.HiddenFor(c => c.Client.AstrologyZodiacSign)
+    @Html.HiddenFor(c => c.Client.TypeOfSporter)
+
+
+    <!-- Aktiecode wordt niet getoond bij Create van een client -->
+    @*  @Html.Partial("", Model)   VEROUDERDE SYNTAX *@
+    <partial name="GedeeldeViewsClient/_ClientFieldsPartial" for="@Model" />
+
+    <br />
     <div>
-       
-        <!-- De Summary box toont geen foutboodschappen op property level in de Summary box-->
-        <!-- Maw de foutboodschappen vanuit Data Annotations komen bij de velden zelf -->
-
-        <!-- Als ModelState.IsValid dan vervolgen we met de complexere custom made error messages -->
-        <!-- Zoals bijvoorbeeld een check op een reguliere expressie, of een database integriteits-check -->
-        <!-- excludePropertyErrors = true -->
-
-        <!-- Alleen complexe, expliciet gecodeerde foutboodschappen tonen we in de ValidationSummary -->
-
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-        @Html.HiddenFor(c => c.Client.ActionCode)
-        @Html.HiddenFor(c => c.Client.DoctorId)
-
-
-        <!-- Aktiecode wordt niet getoond bij Create van een client -->
-        @*  @Html.Partial("", Model)   VEROUDERDE SYNTAX *@
-        <partial name="GedeeldeViewsClient/_ClientFieldsPartial" for="@Model" />
-
-        <br />
-        <div>
-            <input type="submit" value="Creëer client" />
-        </div>
-
-        <br />
-        <!-- Als de shared view niet direct onder een standaard View folder staat -->
-        <!-- Bijvoorbeeld "Client" "Prescription" of "Shared" -->
-        <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
-        <partial name="GedeeldeViewsClient/_ButtonToClientListPartial.cshtml" for="@Model" />
-
-        <!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
-        <!-- "Client", "Prescription", etc, en "Shared" -->
-        <partial name="_ComplimentPartial" />
-
+        <input type="submit" value="Creëer client" />
     </div>
+
+    <br />
+    <!-- Als de shared view niet direct onder een standaard View folder staat -->
+    <!-- Bijvoorbeeld "Client" "Prescription" of "Shared" -->
+    <!-- Gebruik dan onderstaande syntax met of zonder .cshtml extensie -->
+    <partial name="GedeeldeViewsClient/_ButtonToClientListPartial.cshtml" for="@Model" />
+
+    <!-- Onderstaande partial wordt alleen gezocht in de standard view folders: -->
+    <!-- "Client", "Prescription", etc, en "Shared" -->
+    <partial name="_ComplimentPartial" />
+
+</div>
 
 }
