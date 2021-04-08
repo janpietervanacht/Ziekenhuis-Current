@@ -1169,6 +1169,10 @@ C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhu
 C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.dll
 C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.pdb
 C:\Users\janpi\OneDrive\data Infinite Mission\@omscholing ontwikkelaar\@Ziekenhuis Application\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.genruntimeconfig.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.AssemblyInfoInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.AssemblyInfo.cs
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.csprojAssemblyReference.cache
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\Ziekenhuis.BackGround.exe
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\Ziekenhuis.Ziekenhuis.Views.dll
@@ -1426,10 +1430,6 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debu
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\Ziekenhuis.Ziekenhuis.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
-C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.csprojAssemblyReference.cache
-C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.AssemblyInfoInputs.cache
-C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.AssemblyInfo.cs
-C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.csproj.CoreCompileInputs.cache
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.csproj.CopyComplete
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.pdb

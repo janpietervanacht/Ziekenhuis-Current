@@ -1,0 +1,7 @@
+﻿Project: FormsAppZiekenhuis
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Windows application
+----------------------------------------
+NuGet Packages:  geen
+ 

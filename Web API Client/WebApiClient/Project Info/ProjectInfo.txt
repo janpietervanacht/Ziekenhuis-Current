@@ -1,0 +1,9 @@
+﻿Project naam: WebApiClient
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console Application
+----------------------------------------
+NuGet Packages:  
+Microsoft.Extensions.Configuration.FileExtensions
+Microsoft.Extensions.Configuration.Json
+Newtonsoft.Json

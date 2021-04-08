@@ -1,0 +1,9 @@
+﻿Project naam: Migration
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console Application
+----------------------------------------
+NuGet Packages:  
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Design
+Microsoft.Extensions.Hosting

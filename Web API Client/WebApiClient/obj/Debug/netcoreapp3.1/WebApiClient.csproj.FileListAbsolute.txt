@@ -86,7 +86,6 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\We
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.csprojAssemblyReference.cache
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.AssemblyInfoInputs.cache
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.AssemblyInfo.cs
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.csproj.CoreCompileInputs.cache
@@ -94,3 +93,4 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\We
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.genruntimeconfig.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Web API Client\WebApiClient\obj\Debug\netcoreapp3.1\WebApiClient.csprojAssemblyReference.cache

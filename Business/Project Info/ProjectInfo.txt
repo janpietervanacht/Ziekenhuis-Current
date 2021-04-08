@@ -1,0 +1,7 @@
+﻿Project: Business
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Class Library
+----------------------------------------
+NuGet Packages:  geen
+ 

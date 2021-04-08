@@ -1,0 +1,13 @@
+﻿Project naam: UnitTest
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console Application
+----------------------------------------
+NuGet Packages:  
+coverlet.collector
+Microsoft.EntityFrameworkCore.InMemory
+Microsoft.EntityFrameworkCore.Sqlite
+Microsoft.NET.Test.Sdk
+Moq
+MSTest.TestAdapter
+MSTest.TestFramework

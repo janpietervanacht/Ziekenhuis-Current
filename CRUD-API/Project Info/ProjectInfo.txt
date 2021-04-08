@@ -1,0 +1,15 @@
+﻿Project naam: CRUD-API
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console Application
+----------------------------------------
+NuGet Packages:  
+AutoMapper
+AutoMapper.Extensions.Microsoft.DependencyInjection
+Microsoft.AspNetCore.Mvc.Versioning
+Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
+NLog.Appsettings.Standard
+NLog.Web.AspNetCore
+NLog.WindowsEventLog
+Swashbuckle.AspNetCore
+System.Data.SqlClient

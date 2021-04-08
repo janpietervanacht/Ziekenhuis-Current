@@ -1,0 +1,18 @@
+﻿Project: Ziekenhuis
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console application
+----------------------------------------
+NuGet Packages:
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+Microsoft.AspNetCore.Identity.UI
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+NLog.Appsettings.Standard
+NLog.Web.AspNetCore
+System.Data.SqlClient
+
+

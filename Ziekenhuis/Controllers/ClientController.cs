@@ -8,10 +8,10 @@ using Ziekenhuis.Business.Interfaces;
 using Ziekenhuis.ConstantsAndEnums;
 using Ziekenhuis.Model;
 using Ziekenhuis.Models;
-using Ziekenhuis.ViewModels.SubModels;
 using Ziekenhuis.Ziekenhuis.Controllers.ErrorChecks;
 using Ziekenhuis.Ziekenhuis.Controllers.MappingExtensions;
 using Ziekenhuis.Ziekenhuis.ViewModels;
+using Ziekenhuis.ViewModels.SubModels;
 
 namespace Ziekenhuis.Ziekenhuis.Controllers
 {
@@ -39,8 +39,10 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
                         (prefixString != null XOR subString != null) 
             */
 
-            var result = new ClientListViewModel();
-            result.ClientVMList = new List<ClientViewModel>();
+            var result = new ClientListViewModel
+            {
+                ClientVMList = new List<ClientViewModel>()
+            };
 
             List<Client> cltList;
 
@@ -521,7 +523,7 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
 
         //-------------------------------------------------------------------
 
-        // POST: Client/Update/5
+        // UPDATE POST: Client/Update/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
