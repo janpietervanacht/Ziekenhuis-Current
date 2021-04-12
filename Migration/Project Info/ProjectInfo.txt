@@ -4,6 +4,14 @@ Target Framework: .Net Core 3.1
 Output Type: Console Application
 ----------------------------------------
 NuGet Packages:  
-Microsoft.EntityFrameworkCore
-Microsoft.EntityFrameworkCore.Design
-Microsoft.Extensions.Hosting
+Microsoft.EntityFrameworkCore:
+	Entity Framework Core is a modern object-database mapper for .NET. 
+	It supports LINQ queries, change tracking, updates, and schema migrations. 
+	EF Core works with SQL Server, Azure SQL Database, SQLite, Azure Cosmos DB, 
+	MySQL, PostgreSQL, and other databases through a provider plugin API.
+
+Microsoft.EntityFrameworkCore.Design:
+	Shared design-time components for Entity Framework Core tools.
+
+Microsoft.Extensions.Hosting:
+	Hosting and startup infrastructures for applications.

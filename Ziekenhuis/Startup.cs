@@ -25,10 +25,13 @@ namespace Ziekenhuis.Ziekenhuis
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        // IServiceCollection: specifies the contract for a collection of service descriptions.
+
         public void ConfigureServices(IServiceCollection services)
         {
+            // AddDbContext: Registers the given context as a service in the IServiceCollection
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
+                options.UseSqlServer( // configures the context to connect to a MSSM database
                     Configuration.GetConnectionString("DefaultConnection")), ServiceLifetime.Scoped);
 
             // Gebruik Scoped en AddScoped om bij iedere instantiatie van onderstaande classes
@@ -36,7 +39,7 @@ namespace Ziekenhuis.Ziekenhuis
             // dan wordt maar één keer een instantie aangemaakt en worden de 2e keer de gegevens niet meer
             // uit de database gehaald.
 
-            services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IClientRepository, ClientRepository>(); // hier maak je een reference naar de instance
             services.AddScoped<IPrescrRepository, PrescrRepository>();
             services.AddScoped<IConsultRepository, ConsultRepository>();
             services.AddScoped<IInvoiceRepository, InvoiceRepository>();

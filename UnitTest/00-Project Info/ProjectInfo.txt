@@ -1,0 +1,29 @@
+﻿Project naam: UnitTest
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console Application
+----------------------------------------
+NuGet Packages:  
+
+coverlet.collector:
+	Coverlet is a cross platform code coverage library for .NET, with support for line, branch and method coverage
+
+Microsoft.EntityFrameworkCore.InMemory:
+	In-memory database provider for Entity Framework Core (to be used for testing purposes).
+
+Microsoft.EntityFrameworkCore.Sqlite:
+	SQLite database provider for Entity Framework Core.
+
+Microsoft.NET.Test.Sdk
+	The MSbuild targets and properties for building .NET test projects.
+
+Moq:
+	Moq is the most popular and friendly mocking framework for .NET.
+
+MSTest.TestAdapter:
+	The adapter to discover and execute MSTest Framework based tests.
+
+MSTest.TestFramework:
+	This is MSTest V2, the evolution of Microsoft's Test Framework.
+	To discover and execute tests install MSTest.TestAdapter.
+    To discover and execute tests for project.json based projects install dotnet-test-mstest.

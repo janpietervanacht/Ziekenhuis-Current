@@ -8,6 +8,9 @@ namespace Ziekenhuis.Ziekenhuis
     {
         public static void Main(string[] args)
         {
+            /*
+             * Build(): Builds the required services and an IWebHost which hosts a web application.
+             */
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -20,6 +23,7 @@ namespace Ziekenhuis.Ziekenhuis
         // maar de log-tabel in SQL server wordt niet gevuld
         // Kijk dan in de interne-logging van NLog
 
+        // ConfigureWebHostDefaults: Configures a IHostBuilder with defaults for hosting a web app.
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -3,7 +3,13 @@
 Target Framework: .Net Core 3.1
 Output Type: Console Application
 ----------------------------------------
-NuGet Packages:  
-Microsoft.Extensions.Configuration.FileExtensions
-Microsoft.Extensions.Configuration.Json
-Newtonsoft.Json
+NuGet Packages:  Zie https://www.nuget.org/packages
+
+Microsoft.Extensions.Configuration.FileExtensions:
+	Extension methods for configuring file-based configuration providers for Microsoft.Extensions.Configuration.
+
+Microsoft.Extensions.Configuration.Json:
+	JSON configuration provider implementation for Microsoft.Extensions.Configuration.
+
+Newtonsoft.Json:
+	Json.NET is a popular high-performance JSON framework for .NET

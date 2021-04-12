@@ -1,0 +1,47 @@
+﻿Project: Ziekenhuis
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Console application
+----------------------------------------
+NuGet Packages: Zie https://www.nuget.org/packages 
+Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore: 
+	Use this middleware to detect and diagnose errors with Entity Framework Core migrations.
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore: 
+	ASP.NET Core Identity provider that uses Entity Framework Core.
+
+Microsoft.AspNetCore.Identity.UI: 
+	ASP.NET Core Identity UI is the default Razor Pages built-in UI for the ASP.NET Core Identity framework
+
+Microsoft.EntityFrameworkCore.Design:
+	Shared design-time components for Entity Framework Core tools.
+
+Microsoft.EntityFrameworkCore.SqlServer:
+	Microsoft SQL Server database provider for Entity Framework Core.
+
+Microsoft.EntityFrameworkCore.Tools:
+	Entity Framework Core Tools for the NuGet Package Manager Console in Visual Studio.
+	Enables these commonly used commands:
+		Add-Migration
+		Drop-Database
+		Get-DbContext
+		Get-Migration
+		Remove-Migration
+		Scaffold-DbContext
+		Script-Migration
+		Update-Database
+
+Microsoft.VisualStudio.Web.CodeGeneration.Design:
+	Contains the dotnet-aspnet-codegenerator command used for generating controllers and views.
+
+NLog.Appsettings.Standard:
+	An NLog layout renderer be used to access appsettings.json
+
+NLog.Web.AspNetCore:
+	Adds helpers and layout renderers for websites and web applications.
+
+System.Data.SqlClient: 
+	Provides the data provider for SQL Server. 
+	These classes provide access to versions of SQL Server and 
+	encapsulate database-specific protocols, including tabular data stream (TDS)
+

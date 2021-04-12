@@ -1,0 +1,12 @@
+﻿Project: BackGround
+
+NugetPackages: zie https://www.nuget.org/packages
+
+Microsoft.Extensions.Configuration.FileExtensions:
+	Extension methods for configuring file-based configuration providers for Microsoft.Extensions.Configuration.
+
+Microsoft.Extensions.Configuration.Json:
+	JSON configuration provider implementation for Microsoft.Extensions.Configuration.
+
+Microsoft.Extensions.DependencyInjection:
+	Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.

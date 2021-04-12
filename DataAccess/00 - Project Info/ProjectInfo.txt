@@ -1,0 +1,31 @@
+﻿Project naam: DataAccess
+----------------------------------------
+Target Framework: .Net Core 3.1
+Output Type: Class Library
+----------------------------------------
+NuGet Packages:  Zie https://www.nuget.org/packages 
+
+EntityFrameworkExtras.EFCore:
+	EntityFrameworkExtras.EFCore provides some useful additions to EntityFramework such 
+	as executing Stored Procedures with User-Defined Table Types and Output Parameters.
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore:
+	ASP.NET Core Identity provider that uses Entity Framework Core.
+
+Microsoft.EntityFrameworkCore:
+	Entity Framework Core is a modern object-database mapper for .NET. 
+	It supports LINQ queries, change tracking, updates, and schema migrations. 
+	EF Core works with SQL Server, Azure SQL Database, SQLite, Azure Cosmos DB, 
+	MySQL, PostgreSQL, and other databases through a provider plugin API.
+	Commonly Used Types:
+		Microsoft.EntityFrameworkCore.DbContext
+		Microsoft.EntityFrameworkCore.DbSet
+
+Microsoft.EntityFrameworkCore.SqlServer:
+	Microsoft SQL Server database provider for Entity Framework Core.
+
+NLog.Web.AspNetCore:
+	NLog LoggerProvider for Microsoft.Extensions.Logging and ASP.NET Core platform. 
+	Adds helpers and layout renderers for websites and web applications.
+
+
