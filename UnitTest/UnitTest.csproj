@@ -19,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\BackGround\BackGround\BackGround.csproj" />
     <ProjectReference Include="..\Business\Business.csproj" />
+    <ProjectReference Include="..\UnitTestFactory\UnitTestFactory.csproj" />
+    <ProjectReference Include="..\UnitTestSetupMockedData\UnitTestSetupMockedData.csproj" />
     <ProjectReference Include="..\Ziekenhuis\Ziekenhuis.csproj" />
   </ItemGroup>
 

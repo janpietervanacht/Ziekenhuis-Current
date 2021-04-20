@@ -1,5 +1,8 @@
 ﻿Project: Ziekenhuis
 ----------------------------------------
+OPMERKING: GA GEEN NAMESPACES MEER ACHTERAF WIJZIGEN IN EEN MVC APPLICATIE
+           DAN KRIJG JE EEN HOOP ELLENDE IN DE .CSHTML
+		   ZEKER 2 UUR MEE GEWORSTELD
 Target Framework: .Net Core 3.1
 Output Type: Console application
 ----------------------------------------

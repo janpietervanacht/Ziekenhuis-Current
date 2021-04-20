@@ -1434,3 +1434,7 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debu
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\obj\Debug\netcoreapp3.1\UnitTest.genruntimeconfig.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\UnitTestFactory.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\UnitTestFactory.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\UnitTestSetupMockedData.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTest\bin\Debug\netcoreapp3.1\UnitTestSetupMockedData.pdb

@@ -1,0 +1,12 @@
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\bin\Debug\netcoreapp3.1\UnitTestFactory.deps.json
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\bin\Debug\netcoreapp3.1\UnitTestFactory.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\bin\Debug\netcoreapp3.1\UnitTestFactory.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.csprojAssemblyReference.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.AssemblyInfoInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.AssemblyInfo.cs
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.csproj.CoreCompileInputs.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.csproj.CopyComplete
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.dll
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestFactory\obj\Debug\netcoreapp3.1\UnitTestFactory.pdb

@@ -3395,6 +3395,32 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "UnitTestFactory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Ziekenhuis.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnitTestFactory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnitTestFactory.dll": {}
+        }
+      },
+      "UnitTestSetupMockedData/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Ziekenhuis.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UnitTestSetupMockedData.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UnitTestSetupMockedData.dll": {}
+        }
+      },
       "Ziekenhuis.BackGround/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -10568,6 +10594,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "UnitTestFactory/1.0.0": {
+      "type": "project",
+      "path": "../UnitTestFactory/UnitTestFactory.csproj",
+      "msbuildProject": "../UnitTestFactory/UnitTestFactory.csproj"
+    },
+    "UnitTestSetupMockedData/1.0.0": {
+      "type": "project",
+      "path": "../UnitTestSetupMockedData/UnitTestSetupMockedData.csproj",
+      "msbuildProject": "../UnitTestSetupMockedData/UnitTestSetupMockedData.csproj"
+    },
     "Ziekenhuis.BackGround/1.0.0": {
       "type": "project",
       "path": "../BackGround/BackGround/BackGround.csproj",
@@ -10602,6 +10638,8 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.7",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Moq >= 4.14.5",
+      "UnitTestFactory >= 1.0.0",
+      "UnitTestSetupMockedData >= 1.0.0",
       "Ziekenhuis.BackGround >= 1.0.0",
       "Ziekenhuis.Business >= 1.0.0",
       "Ziekenhuis.Ziekenhuis >= 1.0.0",
@@ -10643,6 +10681,12 @@
             },
             "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
               "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+            },
+            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj": {
+              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj"
+            },
+            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj": {
+              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj"
             },
             "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj": {
               "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj"
@@ -10706,7 +10750,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "UnitTestSetupMockedData/1.0.0": {
+        "dependencies": {
+          "Ziekenhuis.Model": "1.0.0"
+        },
+        "runtime": {
+          "UnitTestSetupMockedData.dll": {}
+        }
+      },
+      "Ziekenhuis.Model/1.0.0": {
+        "runtime": {
+          "Ziekenhuis.Model.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UnitTestSetupMockedData/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ziekenhuis.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
