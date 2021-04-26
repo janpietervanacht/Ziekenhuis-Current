@@ -1,160 +1,195 @@
 ﻿@model Ziekenhuis.Ziekenhuis.ViewModels.ClientViewModel
 
+
+
 <hr /> <!-- display a thematic break (een horizontal rule) -->
 <!-- opmerking: tags als <cite> en <q> en <address>
     zijn niet zinloos, je ze in CSS / JS / TypeScript eigenschappen geven-->
 
-<pre style="background-color: powderblue; color: red">
-Stukje pre-formatted rode
-tekst (courier new)
-</pre>
-
-<h1>Normale h1</h1>
-<h1 style="font-size:60%;text-align:center">h1 op 60 procent, center aligned</h1>
-<p>Normale p</p>
-<h1 style="font-size:150%;text-align: right">p op 150 procent, right aligned</h1>
-
-<p>Dit is <b>Bold tekst</b></p>
-<p>Dit is <strong>Strong tekst</strong></p>
-<p>Dit is <i>Italic tekst</i></p>
-<p>Dit is <em>emphasized tekst</em></p>
-<p>Dit is <mark>marked tekst</mark></p>
-<p>Dit is <del>deleted tekst</del> and this is <ins>inserted tekst</ins></p>
-<p>Dit is <sub>subscript tekst</sub> and this is <sup>superscript tekst</sup></p>
-
-<!-- <abbr> is handig voor browsers, translate-engins en search engines, tooltip via "title" -->
-<p>Hier is een quoot van de website van <abbr title="Infinite Mission">INFMISS</abbr> dat zegt:</p>
-<blockquote cite="https://www.qurentis.nl/producten/">
-    Onze standaard software-oplossingen voor de <q>Healthcare</q><br />
-    vooruitstrevend, innovatief en altijd in ontwikkeling. <br />
-    Het grote voordeel is dat alle systemen met elkaar <br />
-    in verbinding staan en zowel los als samen te gebruiken zijn. <br />
-</blockquote>
+<a href="#section1">Spring naar sectie 1</a>
+<br />
+<a href="#section2">Spring naar sectie 2</a>
+<br />
+<a href="#section3">Spring naar sectie 3</a>
+<br />
+<a href="#section4">Spring naar sectie 4</a>
 <br />
 
-<address>
-    Esschestraat 115 <br />
-    5262 BC <br />
-    Vught   <br />
-    Nederland
-</address>
 
-<!-- een citaat is geen persoon, maar een spreuk, gedicht of boek -->
-<!-- een short quote maakt snel een quoot van een stuk tekst -->
-<p>Was geciteerd door <q>ShakeSpeare</q>: <cite>To be or not to be</cite>, that is the question</p>
+<!-- section1---------------------------------------------------------------- -->
 
-<!-- bi directional override, draai tekst om -->
-<bdo dir="ltr">Draai om LTR</bdo>
-<br />
-<bdo dir="rtl">Draai om RTL</bdo>
-<br />
-<bdo dir="auto">Draai om AUTO</bdo>
-<br />
+<h3 id="section1" class="sectionBorder">Begin sectie 1 ------------------</h3>
 
-<hr />
+    <pre style="background-color: powderblue; color: red">
+        Stukje pre-formatted rode
+        tekst (courier new)
+        </pre>
 
-<!--
+
+<h3 class="sectionBorder">Einde sectie 1 ------------------</h3>
+
+<h3 id="section2" class="sectionBorder">Begin sectie 2 ------------------</h3>
+
+    <h1>Normale h1</h1>
+    <h1 style="font-size:60%;text-align:center">h1 op 60 procent, center aligned</h1>
+    <p>Normale p</p>
+    <h1 style="font-size:150%;text-align: right">p op 150 procent, right aligned</h1>
+
+    <p>Dit is <b>Bold tekst</b></p>
+    <p>Dit is <strong>Strong tekst</strong></p>
+    <p>Dit is <i>Italic tekst</i></p>
+    <p>Dit is <em>emphasized tekst</em></p>
+    <p>Dit is <mark>marked tekst</mark></p>
+    <p>Dit is <del>deleted tekst</del> and this is <ins>inserted tekst</ins></p>
+    <p>Dit is <sub>subscript tekst</sub> and this is <sup>superscript tekst</sup></p>
+
+    <!-- <abbr> is handig voor browsers, translate-engins en search engines, tooltip via "title" -->
+    <p>Hier is een quoot van de website van <abbr title="Infinite Mission">INFMISS</abbr> dat zegt:</p>
+    <blockquote cite="https://www.qurentis.nl/producten/">
+        Onze standaard software-oplossingen voor de <q>Healthcare</q><br />
+        vooruitstrevend, innovatief en altijd in ontwikkeling. <br />
+    </blockquote>
+    <br />
+
+    <address>
+        Esschestraat 115 <br />
+        5262 BC <br />
+        Vught   <br />
+        Nederland
+    </address>
+
+    <!-- een citaat is geen persoon, maar een spreuk, gedicht of boek -->
+    <!-- een short quote maakt snel een quoot van een stuk tekst -->
+    <p>Was geciteerd door <q>ShakeSpeare</q>: <cite>To be or not to be</cite>, that is the question</p>
+
+    <!-- bi directional override, draai tekst om -->
+    <bdo dir="ltr">Draai om LTR</bdo>
+    <br />
+    <bdo dir="rtl">Draai om RTL</bdo>
+    <br />
+    <bdo dir="auto">Draai om AUTO</bdo>
+    <br />
+
+    <hr />
+
+<h3 class="sectionBorder">Einde sectie 2 ------------------</h3>
+
+<h3 id="section3" class="sectionBorder">Begin sectie 3 ------------------</h3>
+
+    <!--
     HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.
     -->
-<!-- HTML supports 140 standard color names. -->
-<h3 style="border: 2px solid Tomato">Header h3, 2 pixels, solid, kleur is Tomato</h3>
-<h3 style="border: 3px dashed DodgerBlue">Header h3, 3 pixels, dashed, kleur is DodgerBlue</h3>
-<h3 style="border: 4px groove Violet">Header h3, 4 pixels, groove,kleur is Violet</h3>
+    <!-- HTML supports 140 standard color names. -->
+    <h3 style="border: 2px solid Tomato">Header h3, 2 pixels, solid, kleur is Tomato</h3>
+    <h3 style="border: 3px dashed DodgerBlue">Header h3, 3 pixels, dashed, kleur is DodgerBlue</h3>
+    <h3 style="border: 4px groove Violet">Header h3, 4 pixels, groove,kleur is Violet</h3>
 
-<br />
+    <br />
 
-<!-- rgb = red green blue 3 primaire kleuren -->
-<!-- als rgb = (x, x, x) dan speel je met grijstinten: -->
+    <!-- rgb = red green blue 3 primaire kleuren -->
+    <!-- als rgb = (x, x, x) dan speel je met grijstinten: -->
 
-<table>
-    <tr>
-        <td colspan="6">De kleuren afgeleid van R G B:</td>
-    </tr>
-
-    <tr>
-        <td style="background-color:rgb(255, 0, 0); color: white">rgb(255, 0, 0)</td>
-        <td style="background-color:rgb(0, 0, 255); color: white">rgb(0, 0, 255)</td>
-        <td style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</td>
-        <td style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</td>
-        <td style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</td>
-        <td style="background-color:rgb(106, 90, 205); color: white">rgb(106, 90, 205)</td>
-    </tr>
-
-    <tr>
-        <td colspan="6">De grijze kleurtjes via RGB:</td>
-    </tr>
-
-    <tr>
-        <td style="background-color:rgb(60, 60, 60); color: white">rgb(60, 60, 60)</td>
-        <td style="background-color:rgb(100, 100, 100); color: white">rgb(100, 100, 100)</td>
-        <td style="background-color: rgb(140, 140, 140); color: white">rgb(140, 140, 140)</td>
-        <td style="background-color: rgb(180, 180, 180); color: black">rgb(180, 180, 180)</td>
-        <td style="background-color: rgb(240, 240, 240); color: black">rgb(240, 240, 240)</td>
-    </tr>
-
-    <tr>
-        <td colspan="6">De kleuren afgeleid van R G B A met de opaque parameter tussen 0 en 1</td>
-    </tr>
-    <tr>
-        <td style="background-color:rgba(60, 179, 113, 0) ; color: black">rgba(60, 179, 113, 0)</td>
-        <td style="background-color:rgba(60, 179, 113, 0.2) ; color: black">rgba(60, 179, 113, 0.2)</td>
-        <td style="background-color:rgba(60, 179, 113, 0.4) ; color: black">rgba(60, 179, 113, 0.4)</td>
-        <td style="background-color:rgba(60, 179, 113, 0.6) ; color: black">rgba(60, 179, 113, 0.6)</td>
-        <td style="background-color:rgba(60, 179, 113, 0.8) ; color: black">rgba(60, 179, 113, 0.8)</td>
-        <td style="background-color:rgba(60, 179, 113, 1.0) ; color: black">rgba(60, 179, 113, 1.0)</td>
-    </tr>
-
-    <tr>
-        <td colspan="6">De kleuren afgeleid van HEX: ##rrggbb</td>
-    </tr>
-
-    <tr>
-        <td style="background-color:#ff0000; color: white">#ff0000</td>
-        <td style="background-color:#0000ff; color: white">#0000ff</td>
-        <td style="background-color:#3cb371; color: white">#3cb371</td>
-        <td style="background-color:#ee82ee; color: white">#ee82ee</td>
-        <td style="background-color:#000000; color: white">zwart is #000000</td>
-        <td style="background-color:#ffffff; color: red">wit is #ffffff</td>
-    </tr>
-
-    <tr>
-        <td colspan="6">De grijze kleurtjes via HEX:</td>
-    </tr>
-    <tr>
-        <td style="background-color:#404040;">#404040</td>
-        <td style="background-color:#686868;">#686868</td>
-        <td style="background-color:#a0a0a0;">#a0a0a0</td>
-        <td style="background-color:#bebebe;">#bebebe</td>
-        <td style="background-color:#dcdcdc;">#dcdcdc</td>
-        <td style="background-color:#f8f8f8;">#f8f8f8</td>
-    </tr>
-
-    <!--- Je hebt ook nog HSL en HSLA: hsla(hue, saturation, lightness, alpha)
-        * Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
-        * Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
-        * Lightness is also a percentage value, 0% is black, and 100% is white.
-     -->
-    <tr>
-        <td colspan="6">HSLA kleuren: </td>
+    <table>
+        <tr>
+            <td colspan="6">De kleuren afgeleid van R G B:</td>
         </tr>
-    <tr>    
-        <td style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</td>
-        <td style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</td>
-        <td style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</td>
-        <td style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</td>
-        <td style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</td>
-        <td style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</td>
-    </tr>
 
-</table>
+        <tr>
+            <td style="background-color:rgb(255, 0, 0); color: white">rgb(255, 0, 0)</td>
+            <td style="background-color:rgb(0, 0, 255); color: white">rgb(0, 0, 255)</td>
+            <td style="background-color:rgb(60, 179, 113);">rgb(60, 179, 113)</td>
+            <td style="background-color:rgb(238, 130, 238);">rgb(238, 130, 238)</td>
+            <td style="background-color:rgb(255, 165, 0);">rgb(255, 165, 0)</td>
+            <td style="background-color:rgb(106, 90, 205); color: white">rgb(106, 90, 205)</td>
+        </tr>
+
+        <tr>
+            <td colspan="6">De grijze kleurtjes via RGB:</td>
+        </tr>
+
+        <tr>
+            <td style="background-color:rgb(60, 60, 60); color: white">rgb(60, 60, 60)</td>
+            <td style="background-color:rgb(100, 100, 100); color: white">rgb(100, 100, 100)</td>
+            <td style="background-color: rgb(140, 140, 140); color: white">rgb(140, 140, 140)</td>
+            <td style="background-color: rgb(180, 180, 180); color: black">rgb(180, 180, 180)</td>
+            <td style="background-color: rgb(240, 240, 240); color: black">rgb(240, 240, 240)</td>
+        </tr>
+
+        <tr>
+            <td colspan="6">De kleuren afgeleid van R G B A met de opaque parameter tussen 0 en 1</td>
+        </tr>
+        <tr>
+            <td style="background-color:rgba(60, 179, 113, 0) ; color: black">rgba(60, 179, 113, 0)</td>
+            <td style="background-color:rgba(60, 179, 113, 0.2) ; color: black">rgba(60, 179, 113, 0.2)</td>
+            <td style="background-color:rgba(60, 179, 113, 0.4) ; color: black">rgba(60, 179, 113, 0.4)</td>
+            <td style="background-color:rgba(60, 179, 113, 0.6) ; color: black">rgba(60, 179, 113, 0.6)</td>
+            <td style="background-color:rgba(60, 179, 113, 0.8) ; color: black">rgba(60, 179, 113, 0.8)</td>
+            <td style="background-color:rgba(60, 179, 113, 1.0) ; color: black">rgba(60, 179, 113, 1.0)</td>
+        </tr>
+
+        <tr>
+            <td colspan="6">De kleuren afgeleid van HEX: ##rrggbb</td>
+        </tr>
+
+        <tr>
+            <td style="background-color:#ff0000; color: white">#ff0000</td>
+            <td style="background-color:#0000ff; color: white">#0000ff</td>
+            <td style="background-color:#3cb371; color: white">#3cb371</td>
+            <td style="background-color:#ee82ee; color: white">#ee82ee</td>
+            <td style="background-color:#000000; color: white">zwart is #000000</td>
+            <td style="background-color:#ffffff; color: red">wit is #ffffff</td>
+        </tr>
+
+        <tr>
+            <td colspan="6">De grijze kleurtjes via HEX:</td>
+        </tr>
+        <tr>
+            <td style="background-color:#404040;">#404040</td>
+            <td style="background-color:#686868;">#686868</td>
+            <td style="background-color:#a0a0a0;">#a0a0a0</td>
+            <td style="background-color:#bebebe;">#bebebe</td>
+            <td style="background-color:#dcdcdc;">#dcdcdc</td>
+            <td style="background-color:#f8f8f8;">#f8f8f8</td>
+        </tr>
+
+        <!--- Je hebt ook nog HSL en HSLA: hsla(hue, saturation, lightness, alpha)
+           * Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+           * Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+           * Lightness is also a percentage value, 0% is black, and 100% is white.
+        -->
+        <tr>
+            <td colspan="6">HSLA kleuren: </td>
+        </tr>
+        <tr>
+            <td style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</td>
+            <td style="background-color:hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</td>
+            <td style="background-color:hsl(147, 50%, 47%);">hsl(147, 50%, 47%)</td>
+            <td style="background-color:hsl(300, 76%, 72%);">hsl(300, 76%, 72%)</td>
+            <td style="background-color:hsl(39, 100%, 50%);">hsl(39, 100%, 50%)</td>
+            <td style="background-color:hsl(248, 53%, 58%);">hsl(248, 53%, 58%)</td>
+        </tr>
+
+    </table>
+
+    <br />
+    <br />
+
+    <hr />
 
 
+<h3 class="sectionBorder">Einde sectie 3 ------------------</h3>
 
+<!-- section4---------------------------------------------------------------- -->
 
+<h3 id="section4" class="sectionBorder">Begin sectie 4 ------------------</h3>
+
+<a href="www.infinitemission.nl" target="_blank">Spring naar absolute URL (een website) in nieuwe tab</a>
+
+<h3 class="sectionBorder">Einde sectie 4 ------------------</h3>
 
 
 <br />
-<br />
+
 
 <!-- Neem DoctorFullName op in een TextBoxFor, want anders wordt de doctor naam niet meer -->
 <!-- getoond bij een redisplay van de view bij foutmeldingen -->

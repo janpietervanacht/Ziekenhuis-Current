@@ -232,3 +232,8 @@ table, th, td {
     border: 1px solid black;
 }
 
+h3.sectionBorder {
+    color: purple;
+    font-weight: bold;
+    margin: 50px; 
+}

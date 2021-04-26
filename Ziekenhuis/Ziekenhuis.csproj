@@ -32,6 +32,7 @@
   <ItemGroup>
     <Folder Include="ButtonModels\" />
     <Folder Include="Logging\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
   <ItemGroup>
