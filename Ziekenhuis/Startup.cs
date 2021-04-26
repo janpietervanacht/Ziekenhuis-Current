@@ -83,9 +83,27 @@ namespace Ziekenhuis.Ziekenhuis
 
             app.UseEndpoints(endpoints =>
             {
+                // CODE BEWAREN, DIT IS DE STANDAARD (HOME CONTROLLER)
+
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //  https://localhost:44316/Client/UpdateWithStyling?clientId=1
+
+                // CODE BEWAREN, IK SPRING VOOR HET GEMAK METEEN NAAR DE CLIENTEN-LIJST:
+
+                //endpoints.MapControllerRoute(
+                //   name: "default",
+                //   pattern: "{controller=Client}/{action=Index}/{id?}");
+
+                // CODE BEWAREN, IK SPRING VOOR HET GEMAK METEEN NAAR CLIENT NUMMER 1
+               
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                   name: "default",
+                   pattern: "{controller=Client}/{action=UpdateWithStyling}/{clientId=1}");
+
+
                 endpoints.MapRazorPages();
             });
         }

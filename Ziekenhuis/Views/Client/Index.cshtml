@@ -105,74 +105,80 @@
 
     @foreach (var c in @Model.ClientVMList)
     {
-        <tr>
+<tr>
 
-            <td>
-                @Html.DisplayFor(i => c.Client.ActionCode)
-            </td>
-            <td>
-                @Html.DisplayFor(i => c.ClientFullName)
-            </td>
-            <td>
-                @Html.DisplayFor(i => c.Client.ClientNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(i => c.Client.BirthDate)
-            </td>
-            <td>
-                @Html.DisplayFor(i => c.AgeInDays)
-            </td>
-            <td>
-                @Html.DisplayFor(i => c.NrofPrescriptions)
-            </td>
+    <td>
+        @Html.DisplayFor(i => c.Client.ActionCode)
+    </td>
+    <td>
+        @Html.DisplayFor(i => c.ClientFullName)
+    </td>
+    <td>
+        @Html.DisplayFor(i => c.Client.ClientNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(i => c.Client.BirthDate)
+    </td>
+    <td>
+        @Html.DisplayFor(i => c.AgeInDays)
+    </td>
+    <td>
+        @Html.DisplayFor(i => c.NrofPrescriptions)
+    </td>
 
-            @if (@Model.DoctorId == null)
-            {
-                <td>
-                    @Html.DisplayFor(i => c.DoctorFullName)
-                </td>
-            }
+    @if (@Model.DoctorId == null)
+    {
+        <td>
+            @Html.DisplayFor(i => c.DoctorFullName)
+        </td>
+    }
+    <td>
+        <button class="clickButtonJP">
+            <!-- controller naam mag weg als je in dezelfde controller blijft -->
+            @Html.ActionLink($"Wijzig", "Update", new { clientId = c.Client.Id })
+        </button>
+    </td>
+    <td>
+        <button class="clickButtonJP">
+            <!-- controller naam mag weg als je in dezelfde controller blijft -->
+            @Html.ActionLink($"Wijzig met Styling", "UpdateWithStyling", new { clientId = c.Client.Id })
+        </button>
+    </td>
+    <td>
+        <!-- onderstaande werkt, maar underline in knop is niet mooi -->
+        <!-- De naam "clientId" moet exact overeenkomen met de parameter van de ActionResult Method Details -->
+        <button class="clickButtonJP">
+            @Html.ActionLink("Details", "Details", new { clientId = c.Client.Id })
+        </button>
+    </td>
+    <td>
+        <!-- De naam "clientId" moet exact overeenkomen met de parameter van de ActionResult Method Delete -->
+        <button class="clickButtonJP">
+            <!-- controller naam mag weg als je in dezelfde controller blijft -->
+            @Html.ActionLink("Verwijder", "Delete", new { clientId = c.Client.Id })
+        </button>
+    </td>
 
-            <td>
-                <!-- onderstaande werkt, maar underline in knop is niet mooi -->
-                <!-- De naam "clientId" moet exact overeenkomen met de parameter van de ActionResult Method Details -->
-                <button class="clickButtonJP">
-                    @Html.ActionLink("Details", "Details", new { clientId = c.Client.Id })
-                </button>
-            </td>
-            <td>
-                <!-- De naam "clientId" moet exact overeenkomen met de parameter van de ActionResult Method Delete -->
-                <button class="clickButtonJP">
-                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
-                    @Html.ActionLink("Verwijder", "Delete", new { clientId = c.Client.Id })
-                </button>
-            </td>
-            <td>
-                <button class="clickButtonJP">
-                    <!-- controller naam mag weg als je in dezelfde controller blijft -->
-                    @Html.ActionLink($"Wijzig", "Update", new { clientId = c.Client.Id })
-                </button>
-            </td>
-            <td>
-                <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Prescription Controller -->
-                <button class="clickButtonJP">
-                    @Html.ActionLink("Recepten", "Index", "Prescription", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
-                </button>
-            </td>
-            <td>
-                <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Consult Controller -->
-                <button class="clickButtonJP">
-                    @Html.ActionLink("Consults", "Index", "Consult", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
-                </button>
-            </td>
-            <td>
-                <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Consult Controller -->
-                <button class="clickButtonJP">
-                    @Html.ActionLink("Facturen", "Index", "Invoice", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
-                </button>
-            </td>
+    <td>
+        <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Prescription Controller -->
+        <button class="clickButtonJP">
+            @Html.ActionLink("Recepten", "Index", "Prescription", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
+        </button>
+    </td>
+    <td>
+        <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Consult Controller -->
+        <button class="clickButtonJP">
+            @Html.ActionLink("Consults", "Index", "Consult", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
+        </button>
+    </td>
+    <td>
+        <!-- clientId / doctorId moet overeenkomen met de parameters van de ActionResult Method Index in Consult Controller -->
+        <button class="clickButtonJP">
+            @Html.ActionLink("Facturen", "Index", "Invoice", new { doctorId = c.Client.DoctorId, clientId = c.Client.Id })
+        </button>
+    </td>
 
-        </tr>
+</tr>
 
     }
 

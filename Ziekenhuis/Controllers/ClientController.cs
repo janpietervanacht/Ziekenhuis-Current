@@ -491,6 +491,42 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
         // Update GET (ook actief / inactief maken hoort hierbij)  
         public IActionResult Update(int clientId)
         {
+            return UpdatGet(clientId);
+        }
+
+        //-------------------------------------------------------------------
+
+        // UPDATE POST: Client/Update/5
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(ClientViewModel cltVM)
+        {
+            return UpdatePost(cltVM);
+        }
+
+        //-------------------------------------------------------------------
+        // Update GET met HTML en CSS oefeningen (ook actief / inactief maken hoort hierbij)  
+        public IActionResult UpdateWithStyling(int clientId)
+        {
+            return UpdatGet(clientId);
+        }
+
+        //-------------------------------------------------------------------
+
+        // UPDATE POST met HTML en CSS oefeningen: Client/Update/5
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpdateWithStyling(ClientViewModel cltVM)
+        {
+            return UpdatePost(cltVM);
+        }
+
+        //----------------------------------------------------- 
+
+        private IActionResult UpdatGet(int clientId)
+        {
             var clt = _clientManager.GetClient(clientId);
             var cltVM = clt.ToClientVM();
 
@@ -505,11 +541,11 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             cltVM.Countries = _countryManager.GetAllCountries();
 
             CreateListOfZodiacs(cltVM); // cltVM is call by reference 
- 
+
             //  zoek index in Enum op van de betreffende sterrenbeeld
             //  zodat deze als eerste wordt getoond in de view: 
             AstrologyZodiacSign zodiacSign = (AstrologyZodiacSign)Enum.Parse(typeof(AstrologyZodiacSign), clt.AstrologyZodiacSign);
-            cltVM.ZodiacId = (int)zodiacSign; 
+            cltVM.ZodiacId = (int)zodiacSign;
 
             CreateListOfSportTypes(cltVM); // cltVM is call by reference  
 
@@ -521,15 +557,8 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             return View(cltVM);
         }
 
-        //-------------------------------------------------------------------
-
-        // UPDATE POST: Client/Update/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Update(ClientViewModel cltVM)
+        private IActionResult UpdatePost(ClientViewModel cltVM)
         {
-
             if (!ModelState.IsValid)
             {
                 // Geef de ViewModel terug:
@@ -578,10 +607,10 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             // Zet cltVM.ZodiacId (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.AstrologyZodiacSign
             // Zet cltVM.TypeOfSporter (is een int, die geselecteerd is in het scherm) over naar cltVM.Client.TypeOfSporter
 
-            var zodiacSign = (AstrologyZodiacSign) cltVM.ZodiacId;
+            var zodiacSign = (AstrologyZodiacSign)cltVM.ZodiacId;
             cltVM.Client.AstrologyZodiacSign = zodiacSign.ToString();
 
-            var sportType = (SportType) cltVM.SportTypeId;
+            var sportType = (SportType)cltVM.SportTypeId;
             cltVM.Client.TypeOfSporter = sportType.ToString();
 
             // converteer cltVM naar clt via extension method
@@ -589,8 +618,6 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
             _clientManager.UpdateClient(clt);
             return RedirectToAction("Index");
         }
-
-        //----------------------------------------------------- 
 
         public IActionResult Privacy()
         {

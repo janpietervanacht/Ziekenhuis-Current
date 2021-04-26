@@ -214,3 +214,5 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\De
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\Debug\netcoreapp3.1\Ziekenhuis.Ziekenhuis.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\Debug\netcoreapp3.1\Ziekenhuis.Ziekenhuis.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\Debug\netcoreapp3.1\Ziekenhuis.genruntimeconfig.cache
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\Debug\netcoreapp3.1\Razor\Views\Client\UpdateWithStyling.cshtml.g.cs
+C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Ziekenhuis\obj\Debug\netcoreapp3.1\Razor\Views\Client\GedeeldeViewsClient\_ClientFieldsWithStylingPartial.cshtml.g.cs
