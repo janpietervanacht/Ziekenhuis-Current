@@ -10653,11 +10653,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
+      "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
       "projectName": "UnitTest",
-      "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
+      "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\UnitTest.csproj",
       "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\obj\\",
+      "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -10676,20 +10676,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\BackGround\\BackGround\\BackGround.csproj"
             },
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
             },
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestFactory\\UnitTestFactory.csproj"
             },
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\UnitTestSetupMockedData\\UnitTestSetupMockedData.csproj"
             },
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Ziekenhuis\\Ziekenhuis.csproj"
             }
           }
         }

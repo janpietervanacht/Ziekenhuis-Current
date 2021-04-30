@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {}
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
+        "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
         "projectName": "Ziekenhuis.Business",
-        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
+        "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\obj\\",
+        "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
+              "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
+              "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+                "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
         "projectName": "Ziekenhuis.DataAccess",
-        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\obj\\",
+        "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -95,8 +95,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
+              "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+                "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
               }
             }
           }
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
+        "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
         "projectName": "Ziekenhuis.Model",
-        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
+        "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj",
         "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\obj\\",
+        "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

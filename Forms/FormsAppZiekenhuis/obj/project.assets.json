@@ -5257,11 +5257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\FormsAppZiekenhuis.csproj",
+      "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\FormsAppZiekenhuis.csproj",
       "projectName": "FormsAppZiekenhuis",
-      "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\FormsAppZiekenhuis.csproj",
+      "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\FormsAppZiekenhuis.csproj",
       "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\obj\\",
+      "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Forms\\FormsAppZiekenhuis\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5280,11 +5280,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Business\\Business.csproj"
             },
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Model\\Model.csproj"
             }
           }
         }

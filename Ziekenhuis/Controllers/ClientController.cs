@@ -17,6 +17,7 @@ namespace Ziekenhuis.Ziekenhuis.Controllers
 {
     public class ClientController : Controller
     {
+        // Dit is de CLIENT CONTROLLER 
         private readonly ILogger<ClientController> _logger;
         private readonly IClientManager _clientManager;
         private readonly ICountryManager _countryManager;

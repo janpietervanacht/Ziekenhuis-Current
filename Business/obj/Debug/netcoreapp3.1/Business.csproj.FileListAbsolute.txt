@@ -110,3 +110,17 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debu
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.deps.json
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.DataAccess.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csprojAssemblyReference.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Business\obj\Debug\netcoreapp3.1\Ziekenhuis.Business.pdb

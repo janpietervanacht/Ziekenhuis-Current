@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj": {}
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj": {
+    "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj",
+        "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj",
         "projectName": "WebApiClient",
-        "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj",
+        "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\WebApiClient.csproj",
         "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\obj\\",
+        "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Web API Client\\WebApiClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

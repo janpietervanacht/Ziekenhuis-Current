@@ -56,6 +56,13 @@ namespace Ziekenhuis.DataAccess.ApplicDbContext
                .HasIndex(c => c.ClientNumber)
                .HasName("Index_ClientNumber")
                .IsUnique();
+
+            // Niet unieke index: bijvoorbeeld alle duitsers die schorpioen zijn
+            // Opmerking: CountryId kan null zijn
+            modelBuilder.Entity<Client>()
+              .HasIndex(c => new { c.CountryId, c.AstrologyZodiacSign })
+              .HasName("Index_CountryId_AstrologyZodiacSign");
+              //.IsUnique() // Niet uniek maken
         }
 
 

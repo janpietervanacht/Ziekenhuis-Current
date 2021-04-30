@@ -5812,11 +5812,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\Migration.csproj",
+      "projectUniqueName": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\Migration.csproj",
       "projectName": "Migration",
-      "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\Migration.csproj",
+      "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\Migration.csproj",
       "packagesPath": "C:\\Users\\janpi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\obj\\",
+      "outputPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\Migration\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5835,8 +5835,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\janpi\\source\\repos\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
+            "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\Users\\janpi\\repos-d\\@Ziekenhuis App\\Ziekenhuis Current\\DataAccess\\DataAccess.csproj"
             }
           }
         }

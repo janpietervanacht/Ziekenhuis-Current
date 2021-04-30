@@ -10,3 +10,15 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMock
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.csproj.CopyComplete
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\bin\Debug\netcoreapp3.1\UnitTestSetupMockedData.deps.json
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\bin\Debug\netcoreapp3.1\UnitTestSetupMockedData.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\bin\Debug\netcoreapp3.1\UnitTestSetupMockedData.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.csprojAssemblyReference.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.AssemblyInfoInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.AssemblyInfo.cs
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.csproj.CoreCompileInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.csproj.CopyComplete
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\UnitTestSetupMockedData\obj\Debug\netcoreapp3.1\UnitTestSetupMockedData.pdb

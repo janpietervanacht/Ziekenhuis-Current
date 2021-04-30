@@ -93,15 +93,15 @@ namespace Ziekenhuis.Ziekenhuis
 
                 // CODE BEWAREN, IK SPRING VOOR HET GEMAK METEEN NAAR DE CLIENTEN-LIJST:
 
-                //endpoints.MapControllerRoute(
-                //   name: "default",
-                //   pattern: "{controller=Client}/{action=Index}/{id?}");
-
-                // CODE BEWAREN, IK SPRING VOOR HET GEMAK METEEN NAAR CLIENT NUMMER 1
-               
                 endpoints.MapControllerRoute(
                    name: "default",
-                   pattern: "{controller=Client}/{action=UpdateWithStyling}/{clientId=1}");
+                   pattern: "{controller=Client}/{action=Index}/{id?}");
+
+                // CODE BEWAREN, IK SPRING VOOR HET GEMAK METEEN NAAR CLIENT NUMMER 1
+
+                //endpoints.MapControllerRoute(
+                //   name: "default",
+                //   pattern: "{controller=Client}/{action=UpdateWithStyling}/{clientId=1}");
 
 
                 endpoints.MapRazorPages();
