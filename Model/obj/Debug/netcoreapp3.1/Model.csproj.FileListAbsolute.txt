@@ -68,3 +68,12 @@ C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\n
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
 C:\Users\janpi\source\repos\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Model.csprojAssemblyReference.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.deps.json
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\bin\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Model.csprojAssemblyReference.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfoInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Model.AssemblyInfo.cs
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Model.csproj.CoreCompileInputs.cache
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Ziekenhuis.Model.dll
+D:\Users\janpi\repos-d\@Ziekenhuis App\Ziekenhuis Current\Model\obj\Debug\netcoreapp3.1\Ziekenhuis.Model.pdb
